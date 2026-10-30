@@ -9,7 +9,6 @@ async function proxyRequest(request: NextRequest) {
 
   if (!baseUrl) {
     return NextResponse.json(
-      { error: "API_BASE_URL is not configured" },
       { status: 500 }
     );
   }
