@@ -1,8 +1,10 @@
-cat > .gitignore <<'EOF'
 # Environment variables
 .env
 .env.*
 !.env.example
+
+backend/.env
+backend/certs/
 
 # Python
 __pycache__/
@@ -28,4 +30,3 @@ Thumbs.db
 
 # Logs
 *.log
-EOF
