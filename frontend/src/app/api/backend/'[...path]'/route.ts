@@ -1,8 +1,6 @@
 
 import { NextRequest, NextResponse } from "next/server";
 
-export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
 
 async function proxyRequest(request: NextRequest) {
   const baseUrl = process.env.API_BASE_URL?.replace(/\/+$/, "");
