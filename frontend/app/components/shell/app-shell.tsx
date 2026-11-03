@@ -25,7 +25,7 @@ function Brand() {
         <span className="text-body-emphasis font-semibold tracking-tight text-foreground">
           Job Discovery
         </span>
-        <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+        <span className="mt-1 text-small font-semibold uppercase tracking-[0.12em] text-muted-foreground">
           Data Platform
         </span>
       </span>
