@@ -26,10 +26,14 @@ Run this checklist before marking any Job Discovery Platform page or component c
 - [ ] No unapproved gradients, heavy shadows, decorative effects, raw one-off brand colors, or dark theme.
 
 ## Home / overview
-- [ ] Home offers clear entry points to Jobs, Market Insights, and Data Pipeline.
-- [ ] The data-flow diagram is labeled as architecture, not live execution status.
-- [ ] No unsupported KPIs, job counts, match percentages, testimonials, or AI claims are shown.
-- [ ] Home does not duplicate the Jobs search and filter interface.
+- [ ] Home explains the multi-source IT job discovery value in one concise hero.
+- [ ] Home uses one vertically stacked layout; no split hero, content columns, or left sidebar.
+- [ ] Keyword search and all six filters submit their values to the Jobs route.
+- [ ] Category shortcuts open Jobs with the selected category pre-applied.
+- [ ] TopCV and VietnamWorks are the only named recruitment sources.
+- [ ] Home contains no ETL explanation, pipeline diagram/status, or technical portfolio pitch.
+- [ ] No fabricated KPIs, job counts, salary averages, match percentages, testimonials, or AI claims are shown.
+- [ ] Latest jobs are omitted until backed by a real API; demo fixtures are not presented as live jobs.
 
 ## Responsive
 - [ ] Checked at 360px and 390px mobile widths.
