@@ -4,6 +4,7 @@ Run this checklist before marking any Job Discovery Platform page or component c
 
 ## Product consistency
 - [ ] Uses the shared AppShell from app/components/shell/app-shell.tsx.
+- [ ] Primary navigation is in the horizontal top header; no persistent left sidebar remains.
 - [ ] Active navigation matches the current route and uses aria-current=page.
 - [ ] Mobile navigation opens, closes with Escape, and returns focus to its trigger.
 - [ ] Mobile navigation remains usable with keyboard and touch.
@@ -36,7 +37,10 @@ Run this checklist before marking any Job Discovery Platform page or component c
 - [ ] Zero is not confused with missing/unavailable data.
 - [ ] No fabricated counts, salary values, timestamps, pipeline status, or quality scores.
 - [ ] Demo/sample data is visibly labeled and isolated from API-backed data.
+- [ ] Search appears before the horizontal dropdown filter row.
+- [ ] Filters cover career level, salary, location, employment type, category, and posting date.
 - [ ] Search and filters update results predictably; clearing filters restores the default result set.
+- [ ] Filter layout wraps cleanly on tablet and mobile without forcing page-level horizontal scrolling.
 - [ ] Expandable job details and no-results state are keyboard accessible.
 - [ ] Chart title, units, labels, legend, and tooltip are understandable.
 
