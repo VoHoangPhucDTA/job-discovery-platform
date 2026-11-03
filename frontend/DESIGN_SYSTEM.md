@@ -24,7 +24,7 @@ This document is the single source of truth for visual and interaction decisions
 - Product impression: a real Vietnamese job-market discovery product with a data platform behind it.
 - Visual balance: product-first, not generic admin dashboard; charts and operational details support the product story.
 - Decoration: restrained. Prefer whitespace, alignment, clear hierarchy, and subtle borders over gradients, glassmorphism, oversized shadows, or decorative blobs.
-- Copy: Vietnamese for user-facing interface. Keep technical identifiers and common industry terms where clearer (ETL, API, Data Pipeline, SQL).
+- Copy: Vietnamese for user-facing interface, including navigation labels, section eyebrows, badges, and helper text. Keep established technical terms and product names where clearer (ETL, API, Data Pipeline, Data Warehouse, SQL, TopCV, VietnamWorks). Avoid mixing English decorative labels into otherwise Vietnamese sections.
 
 ## 3. Color tokens
 
@@ -254,6 +254,7 @@ Test at 360px, 390px, 768px, 1024px, 1280px, and 1440px. Do not rely on hover fo
 - CSS variables in the global theme are the canonical source for colors, typography utilities, and shared design tokens.
 - Tailwind CSS 4 is used through the existing @import tailwindcss and @theme inline setup; do not add Tailwind v3 configuration or syntax.
 - Import global CSS once from the root layout. Use utilities for normal styling and CSS Modules only for isolated component styles where they are clearer.
+- Put global element resets (for example, anchor defaults) inside Tailwind's `@layer base`. Do not leave unlayered tag selectors that can override utility classes such as text color on links.
 - Keep the root document language as vi; define application metadata only in Server Component layouts/pages.
 - Components must consume semantic tokens (for example `bg-background`, `text-foreground`, `border-border`, or approved CSS variable equivalents), not repeat raw hex values.
 - Keep shared UI primitives in the existing component structure; inspect before creating duplicates.
