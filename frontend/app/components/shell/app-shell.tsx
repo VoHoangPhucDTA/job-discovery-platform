@@ -217,7 +217,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         <div className="border-t border-border p-4">
           <div className="rounded-md bg-surface-muted px-3 py-3">
             <p className="text-small font-semibold text-foreground">
-              Vietnam IT Job Market
+              Thị trường việc làm IT Việt Nam
             </p>
             <p className="mt-1 text-small text-muted-foreground">
               Khám phá dữ liệu tuyển dụng và xu hướng thị trường.
