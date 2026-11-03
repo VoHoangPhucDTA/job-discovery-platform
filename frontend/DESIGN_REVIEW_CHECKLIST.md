@@ -25,6 +25,12 @@ Run this checklist before marking any Job Discovery Platform page or component c
 - [ ] Cards, inputs, buttons, badges, tables, and chart typography match shared primitives.
 - [ ] No unapproved gradients, heavy shadows, decorative effects, raw one-off brand colors, or dark theme.
 
+## Home / overview
+- [ ] Home offers clear entry points to Jobs, Market Insights, and Data Pipeline.
+- [ ] The data-flow diagram is labeled as architecture, not live execution status.
+- [ ] No unsupported KPIs, job counts, match percentages, testimonials, or AI claims are shown.
+- [ ] Home does not duplicate the Jobs search and filter interface.
+
 ## Responsive
 - [ ] Checked at 360px and 390px mobile widths.
 - [ ] Checked at 768px tablet width.
