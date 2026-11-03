@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <div className="space-y-8 sm:space-y-10">
       <PageHeader
-        eyebrow="JOB MARKET INTELLIGENCE"
+        eyebrow="VIỆC LÀM IT VIỆT NAM"
         title="Thị trường việc làm IT, nhìn từ dữ liệu."
         description="Một nền tảng khám phá cơ hội nghề nghiệp và tìm hiểu xu hướng tuyển dụng IT tại Việt Nam, được xây dựng trên quy trình xử lý dữ liệu nhiều nguồn."
         actions={
@@ -53,11 +53,11 @@ export default function Home() {
         }
       />
 
-      <div className="grid gap-5 xl:grid-cols-[1.35fr_0.85fr]">
+      <div className="grid items-start gap-5 xl:grid-cols-[1.35fr_0.85fr]">
         <Card className="overflow-hidden p-5 sm:p-6">
           <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="primary">Data-driven job discovery</Badge>
-            <Badge variant="neutral">Vietnam IT market</Badge>
+            <Badge variant="primary">Khám phá việc làm dựa trên dữ liệu</Badge>
+            <Badge variant="neutral">Thị trường IT Việt Nam</Badge>
           </div>
           <h2 className="mt-5 max-w-2xl text-section-title font-semibold tracking-tight text-foreground">
             Từ dữ liệu tuyển dụng phân tán đến thông tin dễ khám phá và phân tích.
@@ -87,7 +87,7 @@ export default function Home() {
                 Luồng dữ liệu tổng quan
               </h2>
             </div>
-            <Badge variant="info">Architecture</Badge>
+            <Badge variant="info">Kiến trúc</Badge>
           </div>
 
           <div className="mt-5 space-y-2">
@@ -123,7 +123,7 @@ export default function Home() {
         <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="text-small font-semibold uppercase tracking-[0.08em] text-primary">
-              Explore the platform
+              KHÁM PHÁ NỀN TẢNG
             </p>
             <h2
               id="product-areas-title"
@@ -133,7 +133,7 @@ export default function Home() {
             </h2>
           </div>
           <p className="text-small text-muted-foreground">
-            Ba góc nhìn trên cùng một nền tảng dữ liệu.
+            Ba khu vực chức năng trên cùng một nền tảng dữ liệu.
           </p>
         </div>
 
