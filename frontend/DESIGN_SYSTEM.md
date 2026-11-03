@@ -145,12 +145,15 @@ These radius values are exposed as Tailwind utilities through the global theme: 
 ## 7. Shared application shell
 
 All routes must reuse the same:
-- Header/brand placement and navigation behavior.
+- A single horizontal top header containing the brand and primary navigation.
+- No persistent left sidebar in the v1 product shell.
+- A responsive navigation menu that collapses below the desktop breakpoint.
 - Main content max width and responsive gutters.
-- Page heading pattern (title, optional description, optional primary action).
-- Active navigation treatment.
+- Active navigation treatment and consistent header height.
 - Footer or bottom spacing behavior.
 - Loading, empty, error, and unavailable states.
+
+The desktop header places the brand on the left and the four primary navigation links on the right. On mobile, keep the brand and a menu toggle in the header; reveal the same navigation links in a compact panel below it. The active route must use the same visual state on desktop and mobile.
 
 Navigation labels are fixed for v1:
 - Tổng quan
@@ -166,7 +169,7 @@ The first shared UI foundation lives in these locations:
 
 | Component | Canonical file | Responsibility |
 |---|---|---|
-| Application shell | `app/components/shell/app-shell.tsx` | Shared sidebar, responsive navigation, top bar, content area, and footer |
+| Application shell | `app/components/shell/app-shell.tsx` | Shared top header navigation, responsive mobile menu, content area, and footer |
 | Button / ButtonLink | `app/components/ui/button.tsx` | Consistent action and link treatments |
 | Card | `app/components/ui/card.tsx` | Shared bordered surface and padding primitives |
 | Badge | `app/components/ui/badge.tsx` | Neutral and semantic status/category labels |
@@ -182,7 +185,9 @@ The root layout mounts the App Shell. The shell is a Client Component only becau
 | Input | `app/components/ui/input.tsx` | Consistent text and search input |
 | Select | `app/components/ui/select.tsx` | Consistent native select control |
 
-The Jobs route uses a client-side interaction layer in `app/jobs/jobs-browser.tsx` and typed sample fixtures in `app/jobs/demo-jobs.ts`. Until a real jobs API contract exists, the page must display a visible notice that all results are illustrative sample data. Sample fixtures must never be described as live recruitment listings or be included in production API metrics.
+The Jobs route uses a client-side interaction layer in `app/jobs/jobs-browser.tsx` and typed sample fixtures in `app/jobs/demo-jobs.ts`. Its information order is fixed: keyword search first, a compact horizontal row of dropdown filters second, then the result count, sample-data note, sorting control, and full-width job list. The filter row wraps into two columns on narrow screens and must not become a fixed left rail. The page must retain a small but visible label that results are illustrative sample data until a real jobs API contract exists. Sample fixtures must never be described as live recruitment listings or be included in production API metrics.
+
+The v1 filter set includes career level, salary range, location, employment type, job category, and posting date. All filters must be usable together, reset together, and be applied consistently to keyword search and sorting.
 
 ## 8. Component rules
 
@@ -194,9 +199,11 @@ The Jobs route uses a client-side interaction layer in `app/jobs/jobs-browser.ts
 - Icons do not replace accessible text for important actions.
 
 ### Inputs and filters
-- Labels remain visible; placeholders are examples, not labels.
+- Search appears before filters and spans the available content width.
+- Present related filters as a compact horizontal row of native dropdowns; wrap responsively rather than creating a permanent sidebar.
+- Dropdowns must have accessible names through visible labels or aria-labels, and their selected values must describe the filter clearly.
 - Search input, select, date filter, and clear/reset action share heights and radii.
-- Show active filter chips and a clear-all affordance when filters are applied.
+- Show a clear-all affordance when filters are applied.
 - Preserve filter state when moving between pagination pages if the API supports it.
 
 ### Cards
@@ -241,8 +248,8 @@ The Jobs route uses a client-side interaction layer in `app/jobs/jobs-browser.ts
 | Breakpoint | Width | Expected behavior |
 |---|---:|---|
 | Mobile | < 640px | Single-column content, compact header/menu, stacked controls |
-| Tablet | 640–1023px | 2-column cards where useful, collapsible filter rail |
-| Desktop | 1024–1279px | Full navigation, adaptive 2–3 column layouts |
+| Tablet | 640–1023px | Header navigation where it fits; filter dropdowns wrap to 2–3 columns |
+| Desktop | 1024–1279px | Horizontal top navigation, adaptive 2–3 column layouts |
 | Wide | ≥ 1280px | Max-width content, full data dashboard layout |
 
 Test at 360px, 390px, 768px, 1024px, 1280px, and 1440px. Do not rely on hover for mobile interactions.
