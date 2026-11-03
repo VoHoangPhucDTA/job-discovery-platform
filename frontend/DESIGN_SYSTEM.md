@@ -1,6 +1,6 @@
 # Job Discovery Platform — Frontend Design System
 
-> **Status:** v1.0 · **Scope:** all frontend routes and shared components  
+> **Status:** v1.1 · **Scope:** all frontend routes and shared components  
 > **Product direction:** Modern Data Product — clear, trustworthy, data-focused, Vietnamese-first.
 
 This document is the single source of truth for visual and interaction decisions. Home, Jobs, Market Insights, and Data Pipeline must feel like one product. Page-specific variation is allowed only where it improves the task; it must not create a separate visual language.
@@ -28,7 +28,7 @@ This document is the single source of truth for visual and interaction decisions
 
 ## 3. Color tokens
 
-Use semantic CSS variables, not raw colors inside page components.
+Use semantic CSS variables, not raw colors inside page components. The canonical variables are implemented in app/globals.css and exposed to Tailwind through @theme inline.
 
 | Token | Light value | Intended use |
 |---|---|---|
@@ -71,6 +71,8 @@ Use semantic CSS variables, not raw colors inside page components.
 - Do not use Arial, system font stacks, or a new Google font as a page-level override.
 
 **Type scale**
+
+The following semantic Tailwind utilities are defined in app/globals.css: text-display, text-page-title, text-section-title, text-card-title, text-body, text-body-emphasis, text-small, text-kpi, and text-technical. Prefer these utilities over ad-hoc font sizes for recurring roles. The global body default is 14px / 22px.
 
 | Role | Size / line height | Weight | Typical use |
 |---|---:|---:|---|
@@ -226,7 +228,10 @@ Test at 360px, 390px, 768px, 1024px, 1280px, and 1440px. Do not rely on hover fo
 
 ## 12. Engineering implementation rules
 
-- CSS variables in the global theme are the canonical source for color and design tokens.
+- CSS variables in the global theme are the canonical source for colors, typography utilities, and shared design tokens.
+- Tailwind CSS 4 is used through the existing @import tailwindcss and @theme inline setup; do not add Tailwind v3 configuration or syntax.
+- Import global CSS once from the root layout. Use utilities for normal styling and CSS Modules only for isolated component styles where they are clearer.
+- Keep the root document language as vi; define application metadata only in Server Component layouts/pages.
 - Components must consume semantic tokens (for example `bg-background`, `text-foreground`, `border-border`, or approved CSS variable equivalents), not repeat raw hex values.
 - Keep shared UI primitives in the existing component structure; inspect before creating duplicates.
 - Avoid page-specific global CSS. Prefer component-level classes and shared primitives.
