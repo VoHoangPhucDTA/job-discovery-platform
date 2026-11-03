@@ -175,6 +175,15 @@ The first shared UI foundation lives in these locations:
 
 The root layout mounts the App Shell. The shell is a Client Component only because it uses `usePathname` for active navigation and local state for the mobile menu. Keep page content and static primitives server-rendered where possible. The four v1 routes are static route segments; revisit the documented `Suspense` requirement if a future dynamic route with unknown params is added while Cache Components are enabled.
 
+### Shared form controls and Jobs experience
+
+| Component | Canonical file | Responsibility |
+|---|---|---|
+| Input | `app/components/ui/input.tsx` | Consistent text and search input |
+| Select | `app/components/ui/select.tsx` | Consistent native select control |
+
+The Jobs route uses a client-side interaction layer in `app/jobs/jobs-browser.tsx` and typed sample fixtures in `app/jobs/demo-jobs.ts`. Until a real jobs API contract exists, the page must display a visible notice that all results are illustrative sample data. Sample fixtures must never be described as live recruitment listings or be included in production API metrics.
+
 ## 8. Component rules
 
 ### Buttons
