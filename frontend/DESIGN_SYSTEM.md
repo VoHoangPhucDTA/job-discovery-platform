@@ -1,6 +1,6 @@
 # Job Discovery Platform — Frontend Design System
 
-> **Status:** v1.3 · **Scope:** all frontend routes and shared components  
+> **Status:** v1.4 · **Scope:** all frontend routes and shared components  
 > **Product direction:** Modern Data Product — clear, trustworthy, data-focused, Vietnamese-first.
 
 This document is the single source of truth for visual and interaction decisions. Home, Jobs, Market Insights, and Data Pipeline must feel like one product. Page-specific variation is allowed only where it improves the task; it must not create a separate visual language.
@@ -191,14 +191,17 @@ The v1 filter set includes career level, salary range, location, employment type
 
 ## 7.2 Home page content rules
 
-The Home route is an orientation page for both job seekers and visitors evaluating the data product. Keep this content order:
+The Home route is a job-discovery entry point for people who want to search IT vacancies aggregated from multiple recruitment platforms. The user benefit—not the ETL implementation—is the primary story.
 
-1. Product hero with a concise value proposition, a primary link to Jobs, and a secondary link to Market Insights.
-2. A compact architecture diagram from the two project sources through ETL and MySQL Data Warehouse to job discovery and market analysis. Label it as architecture, not live pipeline status.
-3. Three entry cards for finding jobs, understanding the market, and learning how the data pipeline works.
-4. A short explanation of the product principles: easy discovery, source transparency, and analytical use of processed data.
+Keep this single-column, vertically stacked content order:
 
-Do not add invented job counts, salary averages, match percentages, live freshness, testimonials, employer logos, or unsupported AI features. Add market snapshots or featured jobs only when backed by a real API or clearly labeled as sample data. Do not duplicate the Jobs search and filter interface on Home.
+1. A concise hero that explains the core value: IT job opportunities from multiple platforms, searchable in one place.
+2. One full-width keyword search for role, skill, or company.
+3. A compact, responsive horizontal filter row: career level, salary, location, employment type, category, and posting date. Submit the selected criteria to the Jobs route.
+4. Clickable category shortcuts (Data, Backend, Frontend, DevOps, QA) that open Jobs with the matching category preselected.
+5. A restrained source strip that names only the currently supported sources: TopCV and VietnamWorks.
+
+Do not split the Home hero into columns. Do not show a left sidebar, architecture diagram, ETL explanation, pipeline status, data-engineering journey cards, market KPIs, fabricated job counts, salary averages, match percentages, testimonials, or unsupported AI features on Home. Data Pipeline remains a separate navigation route for technical reviewers. Do not add a latest-jobs section until a real jobs API is available; never populate it with demo fixtures without an explicit sample-data label.
 
 ## 8. Component rules
 
