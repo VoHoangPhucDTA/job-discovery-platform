@@ -35,7 +35,9 @@ Run this checklist before marking any Job Discovery Platform page or component c
 - [ ] Loading, empty, error, and unavailable states are distinct and clear.
 - [ ] Zero is not confused with missing/unavailable data.
 - [ ] No fabricated counts, salary values, timestamps, pipeline status, or quality scores.
-- [ ] Demo/sample data is visibly labeled.
+- [ ] Demo/sample data is visibly labeled and isolated from API-backed data.
+- [ ] Search and filters update results predictably; clearing filters restores the default result set.
+- [ ] Expandable job details and no-results state are keyboard accessible.
 - [ ] Chart title, units, labels, legend, and tooltip are understandable.
 
 ## Accessibility and behavior
