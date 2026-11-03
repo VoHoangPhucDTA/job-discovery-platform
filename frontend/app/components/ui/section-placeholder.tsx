@@ -14,7 +14,7 @@ export function SectionPlaceholder({
 }: SectionPlaceholderProps) {
   return (
     <Card className="overflow-hidden">
-      <CardContent className="flex flex-col items-center px-6 py-12 text-center sm:py-16">
+      <CardContent className="flex flex-col items-center px-6 py-10 text-center sm:py-12">
         <div className="mb-4 flex size-12 items-center justify-center rounded-lg bg-primary-soft text-primary">
           <svg
             aria-hidden="true"
