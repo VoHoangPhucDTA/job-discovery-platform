@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -128,6 +128,31 @@ function Navigation({
 export function AppShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const menuTriggerRef = useRef<HTMLButtonElement>(null);
+  const menuCloseButtonRef = useRef<HTMLButtonElement>(null);
+  const wasMenuOpenRef = useRef(false);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) {
+      if (wasMenuOpenRef.current) {
+        wasMenuOpenRef.current = false;
+        menuTriggerRef.current?.focus();
+      }
+      return;
+    }
+
+    wasMenuOpenRef.current = true;
+    menuCloseButtonRef.current?.focus();
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setMobileMenuOpen(false);
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [mobileMenuOpen]);
   const activeItem =
     navigation.find((item) =>
       item.href === "/"
@@ -159,6 +184,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         <div className="flex h-18 items-center justify-between border-b border-border px-5">
           <Brand />
           <button
+            ref={menuCloseButtonRef}
             type="button"
             aria-label="Đóng menu"
             className="rounded-md p-2 text-muted-foreground hover:bg-surface-muted md:hidden"
@@ -206,6 +232,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       <div className="flex min-h-screen min-w-0 flex-1 flex-col">
         <header className="sticky top-0 z-30 flex h-16 shrink-0 items-center gap-3 border-b border-border bg-surface/95 px-4 backdrop-blur sm:px-6 lg:px-8">
           <button
+            ref={menuTriggerRef}
             type="button"
             aria-label="Mở menu điều hướng"
             aria-expanded={mobileMenuOpen}
