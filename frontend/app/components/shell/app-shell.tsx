@@ -15,7 +15,7 @@ type NavigationIconName = (typeof navigation)[number]["icon"];
 
 function NavigationIcon({ name }: { name: NavigationIconName }) {
   const common = {
-    className: "size-[18px] shrink-0",
+    className: "size-5 shrink-0",
     viewBox: "0 0 24 24",
     fill: "none",
     stroke: "currentColor",
@@ -77,7 +77,7 @@ function Brand() {
         <span className="truncate text-body-emphasis font-semibold tracking-tight text-foreground">
           Job Discovery
         </span>
-        <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+        <span className="text-small font-semibold uppercase tracking-[0.16em] text-muted-foreground">
           Data Platform
         </span>
       </span>
@@ -141,7 +141,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         <button
           type="button"
           aria-label="Đóng menu điều hướng"
-          className="fixed inset-0 z-40 cursor-default bg-slate-950/30 md:hidden"
+          className="fixed inset-0 z-40 cursor-default bg-foreground/30 md:hidden"
           onClick={() => setMobileMenuOpen(false)}
         />
       ) : null}
@@ -151,12 +151,12 @@ export function AppShell({ children }: { children: ReactNode }) {
         className={[
           "z-50 w-[280px] shrink-0 flex-col border-r border-border bg-surface",
           mobileMenuOpen
-            ? "fixed inset-y-0 left-0 flex shadow-xl"
+            ? "fixed inset-y-0 left-0 flex shadow-lg"
             : "hidden",
           "md:sticky md:top-0 md:flex md:h-screen md:w-[248px] md:shadow-none",
         ].join(" ")}
       >
-        <div className="flex h-[76px] items-center justify-between border-b border-border px-5">
+        <div className="flex h-18 items-center justify-between border-b border-border px-5">
           <Brand />
           <button
             type="button"
@@ -179,7 +179,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         </div>
 
         <div className="flex-1 overflow-y-auto px-4 py-6">
-          <p className="mb-3 px-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-subtle-foreground">
+          <p className="mb-3 px-3 text-small font-semibold uppercase tracking-[0.14em] text-subtle-foreground">
             Workspace
           </p>
           <Navigation
@@ -197,20 +197,20 @@ export function AppShell({ children }: { children: ReactNode }) {
               Khám phá dữ liệu tuyển dụng và xu hướng thị trường.
             </p>
           </div>
-          <p className="mt-3 px-1 text-[11px] text-subtle-foreground">
+          <p className="mt-3 px-1 text-small text-subtle-foreground">
             Job Discovery Platform
           </p>
         </div>
       </aside>
 
       <div className="flex min-h-screen min-w-0 flex-1 flex-col">
-        <header className="sticky top-0 z-30 flex h-[68px] shrink-0 items-center gap-3 border-b border-border bg-surface/95 px-4 backdrop-blur sm:px-6 lg:px-8">
+        <header className="sticky top-0 z-30 flex h-16 shrink-0 items-center gap-3 border-b border-border bg-surface/95 px-4 backdrop-blur sm:px-6 lg:px-8">
           <button
             type="button"
             aria-label="Mở menu điều hướng"
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-navigation"
-            className="inline-flex size-9 items-center justify-center rounded-md border border-border text-muted-foreground hover:bg-surface-muted md:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-md border border-border text-muted-foreground hover:bg-surface-muted md:hidden"
             onClick={() => setMobileMenuOpen(true)}
           >
             <svg
@@ -235,20 +235,19 @@ export function AppShell({ children }: { children: ReactNode }) {
             </p>
           </div>
 
-          <div className="ml-auto hidden items-center gap-2 rounded-full border border-border px-3 py-1.5 sm:flex">
-            <span className="size-1.5 rounded-full bg-accent" aria-hidden="true" />
+          <div className="ml-auto hidden items-center gap-2 rounded-md border border-border px-3 py-1.5 sm:flex">
             <span className="text-small text-muted-foreground">
               Thị trường IT Việt Nam
             </span>
           </div>
         </header>
 
-        <main className="mx-auto w-full max-w-[1200px] flex-1 px-4 py-6 sm:px-5 sm:py-8 lg:px-6">
+        <main className="mx-auto w-full max-w-content flex-1 px-4 py-6 sm:px-5 sm:py-8 lg:px-6">
           {children}
         </main>
 
         <footer className="border-t border-border px-4 py-4 sm:px-6 lg:px-8">
-          <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-1 text-small text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+          <div className="mx-auto flex w-full max-w-content flex-col gap-1 text-small text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
             <span>Job Discovery Platform</span>
             <span>Khám phá thị trường việc làm IT Việt Nam từ dữ liệu.</span>
           </div>
