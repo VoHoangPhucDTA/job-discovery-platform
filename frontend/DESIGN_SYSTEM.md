@@ -1,6 +1,6 @@
 # Job Discovery Platform — Frontend Design System
 
-> **Status:** v1.2 · **Scope:** all frontend routes and shared components  
+> **Status:** v1.3 · **Scope:** all frontend routes and shared components  
 > **Product direction:** Modern Data Product — clear, trustworthy, data-focused, Vietnamese-first.
 
 This document is the single source of truth for visual and interaction decisions. Home, Jobs, Market Insights, and Data Pipeline must feel like one product. Page-specific variation is allowed only where it improves the task; it must not create a separate visual language.
@@ -188,6 +188,17 @@ The root layout mounts the App Shell. The shell is a Client Component only becau
 The Jobs route uses a client-side interaction layer in `app/jobs/jobs-browser.tsx` and typed sample fixtures in `app/jobs/demo-jobs.ts`. Its information order is fixed: keyword search first, a compact horizontal row of dropdown filters second, then the result count, sample-data note, sorting control, and full-width job list. The filter row wraps into two columns on narrow screens and must not become a fixed left rail. The page must retain a small but visible label that results are illustrative sample data until a real jobs API contract exists. Sample fixtures must never be described as live recruitment listings or be included in production API metrics.
 
 The v1 filter set includes career level, salary range, location, employment type, job category, and posting date. All filters must be usable together, reset together, and be applied consistently to keyword search and sorting.
+
+## 7.2 Home page content rules
+
+The Home route is an orientation page for both job seekers and visitors evaluating the data product. Keep this content order:
+
+1. Product hero with a concise value proposition, a primary link to Jobs, and a secondary link to Market Insights.
+2. A compact architecture diagram from the two project sources through ETL and MySQL Data Warehouse to job discovery and market analysis. Label it as architecture, not live pipeline status.
+3. Three entry cards for finding jobs, understanding the market, and learning how the data pipeline works.
+4. A short explanation of the product principles: easy discovery, source transparency, and analytical use of processed data.
+
+Do not add invented job counts, salary averages, match percentages, live freshness, testimonials, employer logos, or unsupported AI features. Add market snapshots or featured jobs only when backed by a real API or clearly labeled as sample data. Do not duplicate the Jobs search and filter interface on Home.
 
 ## 8. Component rules
 
