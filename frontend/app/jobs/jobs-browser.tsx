@@ -129,15 +129,39 @@ function JobCard({ job }: { job: DemoJob }) {
   );
 }
 
-export function JobsBrowser() {
-  const [draftKeyword, setDraftKeyword] = useState("");
-  const [keyword, setKeyword] = useState("");
-  const [level, setLevel] = useState<LevelFilter>("all");
-  const [salary, setSalary] = useState<SalaryFilter>("all");
-  const [location, setLocation] = useState("all");
-  const [employment, setEmployment] = useState<EmploymentFilter>("all");
-  const [category, setCategory] = useState<CategoryFilter>("all");
-  const [posted, setPosted] = useState<DateFilter>("all");
+type JobsBrowserProps = {
+  initialFilters?: Record<string, string>;
+};
+
+const validValues = {
+  level: ["Intern", "Fresher", "Junior", "Middle", "Senior"],
+  salary: ["under-10", "10-20", "20-30", "over-30"],
+  location: ["TP. Hồ Chí Minh", "Hà Nội", "Đà Nẵng", "Remote"],
+  employment: ["Toàn thời gian", "Bán thời gian", "Thực tập"],
+  category: ["Backend", "Data", "Frontend", "DevOps", "QA"],
+  posted: ["1", "7", "30"],
+} as const;
+
+function initialValue<K extends keyof typeof validValues>(
+  filters: Record<string, string>,
+  key: K,
+): (typeof validValues)[K][number] | "all" {
+  const value = filters[key];
+  return validValues[key].includes(value as never)
+    ? (value as (typeof validValues)[K][number])
+    : "all";
+}
+
+export function JobsBrowser({ initialFilters = {} }: JobsBrowserProps) {
+  const initialKeyword = initialFilters.keyword ?? "";
+  const [draftKeyword, setDraftKeyword] = useState(initialKeyword);
+  const [keyword, setKeyword] = useState(initialKeyword);
+  const [level, setLevel] = useState<LevelFilter>(initialValue(initialFilters, "level"));
+  const [salary, setSalary] = useState<SalaryFilter>(initialValue(initialFilters, "salary"));
+  const [location, setLocation] = useState(initialValue(initialFilters, "location"));
+  const [employment, setEmployment] = useState<EmploymentFilter>(initialValue(initialFilters, "employment"));
+  const [category, setCategory] = useState<CategoryFilter>(initialValue(initialFilters, "category"));
+  const [posted, setPosted] = useState<DateFilter>(initialValue(initialFilters, "posted"));
   const [sort, setSort] = useState<SortOption>("newest");
 
   const filteredJobs = useMemo(() => {
