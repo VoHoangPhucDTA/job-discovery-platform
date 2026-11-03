@@ -70,7 +70,7 @@ These rules apply to every UI change in this frontend. They complement (and do n
 - Do not add authentication, CV matching, saved jobs, direct applications, AI chat, notifications, or admin features without explicit approval.
 - Current job data sources are TopCV and VietnamWorks. Do not add another source without approval.
 - Never fabricate job counts, salaries, market metrics, ETL runs, freshness, quality scores, timestamps, or source health.
-- Clearly label sample/demo content. Distinguish zero, empty, loading, error, and unavailable states.
+- Clearly label sample/demo content. Keep demo fixtures separate from API adapters and page presentation. Distinguish zero, empty, loading, error, and unavailable states. Never describe frontend fixtures as live backend data.
 - Preserve the existing backend proxy at `app/api/backend/[...path]/route.ts` and its `API_BASE_URL` server environment variable.
 - Do not modify backend code, ETL, ingestion, database schemas, API contracts, or deployment configuration as part of UI work.
 
