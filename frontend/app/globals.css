@@ -20,6 +20,7 @@
   --warning: #b45309;
   --warning-soft: #fffbeb;
   --danger: #b91c1c;
+  --danger-hover: #991b1b;
   --danger-soft: #fef2f2;
   --info: #0369a1;
   --info-soft: #f0f9ff;
@@ -28,7 +29,6 @@
   --chart-3: #7c3aed;
   --chart-4: #d97706;
   --chart-5: #64748b;
-  --content-max: 1200px;
 }
 
 @theme inline {
@@ -50,6 +50,7 @@
   --color-warning: var(--warning);
   --color-warning-soft: var(--warning-soft);
   --color-danger: var(--danger);
+  --color-danger-hover: var(--danger-hover);
   --color-danger-soft: var(--danger-soft);
   --color-info: var(--info);
   --color-info-soft: var(--info-soft);
@@ -63,6 +64,7 @@
   --radius-md: 10px;
   --radius-lg: 14px;
   --radius-xl: 18px;
+  --container-content: 1200px;
   --spacing: 0.25rem;
 
   --font-sans: var(--font-geist-sans);
