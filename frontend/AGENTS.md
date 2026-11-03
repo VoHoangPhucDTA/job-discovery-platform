@@ -69,6 +69,9 @@ These rules apply to every UI change in this frontend. They complement (and do n
 - The approved v1 routes are Tổng quan, Việc làm, Phân tích thị trường, and Data Pipeline.
 - Keep primary navigation in the shared horizontal top header. Do not reintroduce a persistent left sidebar unless the product scope is explicitly revised.
 - On the Jobs route, the order is search bar, horizontal responsive dropdown filters, results summary/sort, then the job list. Do not use a fixed filter rail.
+- On Home, prioritize the user's benefit: searching IT vacancies aggregated from supported recruitment sources in one place. Keep a single-column vertical layout with hero, keyword search, horizontal responsive filters, category shortcuts, and a compact source strip.
+- Do not put ETL explanations, architecture diagrams, pipeline status, or technical portfolio messaging in the Home content. Data Pipeline is a separate route for technical reviewers.
+- Home search and filter controls must pass their values to the Jobs route; category shortcuts must preselect the matching category. Do not show latest jobs until backed by a real jobs API.
 - Do not add authentication, CV matching, saved jobs, direct applications, AI chat, notifications, or admin features without explicit approval.
 - Current job data sources are TopCV and VietnamWorks. Do not add another source without approval.
 - Never fabricate job counts, salaries, market metrics, ETL runs, freshness, quality scores, timestamps, or source health.
