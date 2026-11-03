@@ -206,7 +206,7 @@ export function AppShell({ children }: { children: ReactNode }) {
 
         <div className="flex-1 overflow-y-auto px-4 py-6">
           <p className="mb-3 px-3 text-small font-semibold uppercase tracking-[0.14em] text-subtle-foreground">
-            Workspace
+            Không gian
           </p>
           <Navigation
             pathname={pathname}
