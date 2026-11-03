@@ -10,12 +10,12 @@ export default function InsightsPage() {
   return (
     <div className="space-y-8">
       <PageHeader
-        eyebrow="MARKET INTELLIGENCE"
+        eyebrow="PHÂN TÍCH THỊ TRƯỜNG"
         title="Phân tích thị trường"
         description="Khám phá nhu cầu tuyển dụng, kỹ năng phổ biến, mức lương và phân bố cơ hội theo địa điểm."
       />
       <SectionPlaceholder
-        title="Market Insights"
+        title="Phân tích thị trường"
         description="Các chỉ số và biểu đồ phân tích sẽ được kết nối với analytical datasets sau khi xác nhận dữ liệu và API tương ứng."
       />
     </div>
