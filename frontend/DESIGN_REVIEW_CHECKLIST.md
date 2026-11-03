@@ -5,7 +5,8 @@ Run this checklist before marking any Job Discovery Platform page or component c
 ## Product consistency
 - [ ] Uses the shared AppShell from app/components/shell/app-shell.tsx.
 - [ ] Active navigation matches the current route and uses aria-current=page.
-- [ ] Mobile navigation opens, closes, and remains keyboard accessible.
+- [ ] Mobile navigation opens, closes with Escape, and returns focus to its trigger.
+- [ ] Mobile navigation remains usable with keyboard and touch.
 - [ ] Uses the same active, hover, focus, and disabled interaction language.
 - [ ] User-facing copy is Vietnamese-first and uses consistent terminology.
 
