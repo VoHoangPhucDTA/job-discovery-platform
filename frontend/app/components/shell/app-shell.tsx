@@ -149,9 +149,9 @@ export function AppShell({ children }: { children: ReactNode }) {
       <aside
         id="mobile-navigation"
         className={[
-          "z-50 flex w-[280px] shrink-0 flex-col border-r border-border bg-surface",
+          "z-50 w-[280px] shrink-0 flex-col border-r border-border bg-surface",
           mobileMenuOpen
-            ? "fixed inset-y-0 left-0 shadow-xl"
+            ? "fixed inset-y-0 left-0 flex shadow-xl"
             : "hidden",
           "md:sticky md:top-0 md:flex md:h-screen md:w-[248px] md:shadow-none",
         ].join(" ")}
