@@ -54,7 +54,7 @@ export default function Home() {
       />
 
       <div className="grid gap-5 xl:grid-cols-[1.35fr_0.85fr]">
-        <Card className="overflow-hidden p-5 sm:p-6 lg:p-7">
+        <Card className="overflow-hidden p-5 sm:p-6">
           <div className="flex flex-wrap items-center gap-2">
             <Badge variant="primary">Data-driven job discovery</Badge>
             <Badge variant="neutral">Vietnam IT market</Badge>
