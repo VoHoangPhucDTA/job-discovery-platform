@@ -3,7 +3,9 @@
 Run this checklist before marking any Job Discovery Platform page or component complete.
 
 ## Product consistency
-- [ ] Uses the shared application shell and the same navigation as other routes.
+- [ ] Uses the shared AppShell from app/components/shell/app-shell.tsx.
+- [ ] Active navigation matches the current route and uses aria-current=page.
+- [ ] Mobile navigation opens, closes, and remains keyboard accessible.
 - [ ] Uses the same active, hover, focus, and disabled interaction language.
 - [ ] User-facing copy is Vietnamese-first and uses consistent terminology.
 
