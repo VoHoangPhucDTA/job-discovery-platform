@@ -17,9 +17,10 @@ Run this checklist before marking any Job Discovery Platform page or component c
 - [ ] Uses Geist Sans for UI and Geist Mono only for technical/tabular content.
 - [ ] Uses the shared type scale and heading hierarchy (one H1).
 - [ ] Uses the 4px spacing scale and approved radius/elevation values.
+- [ ] Uses the shared max-w-content container instead of page-specific max widths.
 - [ ] Uses shared Tailwind radius utilities and the approved chart color tokens.
 - [ ] Cards, inputs, buttons, badges, tables, and chart typography match shared primitives.
-- [ ] No unapproved gradients, heavy shadows, decorative effects, or dark theme.
+- [ ] No unapproved gradients, heavy shadows, decorative effects, raw one-off brand colors, or dark theme.
 
 ## Responsive
 - [ ] Checked at 360px and 390px mobile widths.
