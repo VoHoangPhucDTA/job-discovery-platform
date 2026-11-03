@@ -81,7 +81,7 @@ export default function Home() {
           <div className="flex items-start justify-between gap-3">
             <div>
               <p className="text-small font-semibold uppercase tracking-[0.08em] text-muted-foreground">
-                Data workflow
+                Quy trình dữ liệu
               </p>
               <h2 className="mt-1 text-card-title font-semibold text-foreground">
                 Luồng dữ liệu tổng quan
