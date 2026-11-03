@@ -8,7 +8,8 @@ Run this checklist before marking any Job Discovery Platform page or component c
 - [ ] Mobile navigation opens, closes with Escape, and returns focus to its trigger.
 - [ ] Mobile navigation remains usable with keyboard and touch.
 - [ ] Uses the same active, hover, focus, and disabled interaction language.
-- [ ] User-facing copy is Vietnamese-first and uses consistent terminology.
+- [ ] All user-facing labels are Vietnamese-first; technical terms and proper product names remain consistent.
+- [ ] Link text colors remain readable on active navigation and primary buttons.
 
 ## Visual tokens
 - [ ] Uses the canonical color variables; no page-local brand hex colors.
@@ -50,5 +51,6 @@ Run this checklist before marking any Job Discovery Platform page or component c
 - [ ] No backend, ETL, schema, or API contract was changed for presentation convenience.
 - [ ] Relevant local Next.js 16.4.3 documentation was read before changing framework code.
 - [ ] Global CSS is imported once from the root layout; no global stylesheet imports are scattered across pages/components.
+- [ ] Global element resets are inside @layer base and do not override Tailwind utilities.
 - [ ] Root document uses lang=vi and has product metadata.
 - [ ] Lint/build checks pass, or the exact blocker is documented.
