@@ -11,13 +11,22 @@ export const metadata = {
 
 export default async function JobsPage({ searchParams }: JobsPageProps) {
   const params = await searchParams;
-  const initialFilters = Object.fromEntries(
-    ["keyword", "level", "salary", "location", "employment", "category", "posted"]
-      .flatMap((key) => {
-        const value = params[key];
-        return typeof value === "string" ? [[key, value]] : [];
-      }),
-  );
+  const initialFilters: Record<string, string> = {};
+
+  for (const key of [
+    "keyword",
+    "level",
+    "salary",
+    "location",
+    "employment",
+    "category",
+    "posted",
+  ]) {
+    const value = params[key];
+    if (typeof value === "string") {
+      initialFilters[key] = value;
+    }
+  }
 
   return <JobsBrowser initialFilters={initialFilters} />;
 }
