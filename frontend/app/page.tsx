@@ -59,7 +59,7 @@ export default function Home() {
             <Badge variant="primary">Data-driven job discovery</Badge>
             <Badge variant="neutral">Vietnam IT market</Badge>
           </div>
-          <h2 className="mt-5 max-w-2xl text-section-title font-semibold tracking-tight text-foreground sm:text-[22px] sm:leading-8">
+          <h2 className="mt-5 max-w-2xl text-section-title font-semibold tracking-tight text-foreground">
             Từ dữ liệu tuyển dụng phân tán đến thông tin dễ khám phá và phân tích.
           </h2>
           <p className="mt-3 max-w-2xl text-body text-muted-foreground">
@@ -144,7 +144,7 @@ export default function Home() {
               href={area.href}
               className="group rounded-lg outline-offset-4 focus-visible:outline-2 focus-visible:outline-primary"
             >
-              <Card className="h-full p-5 transition-colors duration-150 group-hover:border-primary/50">
+              <Card className="flex h-full flex-col p-5 transition-colors duration-150 group-hover:border-primary/50">
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-small text-subtle-foreground">
                     {area.number}
@@ -159,7 +159,7 @@ export default function Home() {
                 <h3 className="mt-5 text-card-title font-semibold text-foreground">
                   {area.title}
                 </h3>
-                <p className="mt-2 min-h-[66px] text-body text-muted-foreground">
+                <p className="mt-2 flex-1 text-body text-muted-foreground">
                   {area.description}
                 </p>
                 <p className="mt-5 text-small font-semibold text-primary">
