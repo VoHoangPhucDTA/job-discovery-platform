@@ -1,6 +1,6 @@
 # Job Discovery Platform — Frontend Design System
 
-> **Status:** v1.1 · **Scope:** all frontend routes and shared components  
+> **Status:** v1.2 · **Scope:** all frontend routes and shared components  
 > **Product direction:** Modern Data Product — clear, trustworthy, data-focused, Vietnamese-first.
 
 This document is the single source of truth for visual and interaction decisions. Home, Jobs, Market Insights, and Data Pipeline must feel like one product. Page-specific variation is allowed only where it improves the task; it must not create a separate visual language.
