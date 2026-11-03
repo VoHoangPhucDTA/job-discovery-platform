@@ -50,6 +50,7 @@ Use semantic CSS variables, not raw colors inside page components. The canonical
 | `--warning` | `#B45309` | Warning/degraded states |
 | `--warning-soft` | `#FFFBEB` | Warning background |
 | `--danger` | `#B91C1C` | Error/failed/destructive states |
+| `--danger-hover` | `#991B1B` | Destructive action hover state |
 | `--danger-soft` | `#FEF2F2` | Error background |
 | `--info` | `#0369A1` | Informational states |
 | `--info-soft` | `#F0F9FF` | Informational background |
@@ -62,7 +63,7 @@ Use semantic CSS variables, not raw colors inside page components. The canonical
 ### Color usage constraints
 
 - Primary blue is the only dominant brand/action color. Teal is a supporting data accent, not a second primary.
-- Green, amber, and red communicate meaning only; do not use them as decoration.
+- Green, amber, and red communicate meaning only; do not use them as decoration. Destructive action hover states use `--danger-hover` rather than one-off red utility colors.
 - Do not encode status using color alone. Pair with text and/or an icon.
 - Charts use the fixed `--chart-1` through `--chart-5` palette (blue, teal, violet, amber, slate). Keep the same series-to-color mapping across pages. Avoid rainbow charts.
 - Use muted text for metadata, not for essential labels or important data.
@@ -116,7 +117,7 @@ Use a 4px base spacing scale:
 | `space-16` | 64px |
 
 Layout rules:
-- Desktop content max width: 1200px; center it with 24px minimum horizontal gutters.
+- Desktop content max width: 1200px via the shared `max-w-content` utility; center it with 24px minimum horizontal gutters.
 - Tablet gutters: 20px. Mobile gutters: 16px.
 - Standard page section gap: 24–32px. Related controls: 8–16px.
 - Use a 12-column grid at wide desktop when useful; collapse progressively instead of squeezing.
