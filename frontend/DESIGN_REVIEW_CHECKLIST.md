@@ -9,6 +9,8 @@ Run this checklist before marking any Job Discovery Platform page or component c
 
 ## Visual tokens
 - [ ] Uses the canonical color variables; no page-local brand hex colors.
+- [ ] Uses semantic typography utilities from app/globals.css where applicable.
+- [ ] Vietnamese diacritics render correctly with the selected font/fallback stack.
 - [ ] Uses Geist Sans for UI and Geist Mono only for technical/tabular content.
 - [ ] Uses the shared type scale and heading hierarchy (one H1).
 - [ ] Uses the 4px spacing scale and approved radius/elevation values.
@@ -40,5 +42,7 @@ Run this checklist before marking any Job Discovery Platform page or component c
 ## Engineering
 - [ ] Shared components were reused rather than duplicated.
 - [ ] No backend, ETL, schema, or API contract was changed for presentation convenience.
-- [ ] Relevant Next.js 16.4.3 documentation was read before changing framework code.
+- [ ] Relevant local Next.js 16.4.3 documentation was read before changing framework code.
+- [ ] Global CSS is imported once from the root layout; no global stylesheet imports are scattered across pages/components.
+- [ ] Root document uses lang=vi and has product metadata.
 - [ ] Lint/build checks pass, or the exact blocker is documented.
