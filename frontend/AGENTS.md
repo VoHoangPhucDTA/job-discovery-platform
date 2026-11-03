@@ -31,7 +31,7 @@ These rules apply to every UI change in this frontend. They complement (and do n
 - `app/globals.css` is the canonical implementation of semantic color, font, and global style tokens.
 - `DESIGN_REVIEW_CHECKLIST.md` is mandatory before considering a page or shared component complete.
 - Do not add page-local brand colors, fonts, radii, shadows, or arbitrary spacing values.
-- UI copy must be Vietnamese-first. Use established technical terms such as ETL, Data Warehouse, API, SQL, and Data Pipeline when they are clearer.
+- UI copy must be Vietnamese-first, including small labels and eyebrow text. Keep established technical terms and product names such as ETL, Data Warehouse, API, SQL, Data Pipeline, TopCV, and VietnamWorks where appropriate.
 
 ## 3. Next.js App Router architecture
 
@@ -52,6 +52,7 @@ These rules apply to every UI change in this frontend. They complement (and do n
 - Do not import global stylesheets from individual pages or scattered components.
 - Prefer semantic classes/tokens such as `bg-background`, `text-foreground`, `border-border`, and approved CSS variable equivalents.
 - Avoid raw hex colors in component markup. Add a token to the design system first when a genuinely new semantic color is required.
+- Keep global element resets inside `@layer base`; do not add unlayered tag selectors that override Tailwind utility classes.
 - Respect the documented 4px spacing scale and radius scale.
 - Check production CSS behavior with `npm run build`, because CSS chunking/order may differ from development.
 
