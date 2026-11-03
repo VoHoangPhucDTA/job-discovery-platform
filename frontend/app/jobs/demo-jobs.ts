@@ -5,6 +5,10 @@ export type DemoJobCategory =
   | "DevOps"
   | "QA";
 
+export type CareerLevel = "Intern" | "Fresher" | "Junior" | "Middle" | "Senior";
+
+export type EmploymentType = "Toàn thời gian" | "Bán thời gian" | "Thực tập";
+
 export type DemoJob = {
   id: string;
   title: string;
@@ -14,6 +18,8 @@ export type DemoJob = {
   salaryMax: number;
   salaryLabel: string;
   category: DemoJobCategory;
+  level: CareerLevel;
+  employmentType: EmploymentType;
   skills: string[];
   source: "TopCV" | "VietnamWorks";
   postedDaysAgo: number;
@@ -25,6 +31,8 @@ export type DemoJob = {
 export const demoJobs: DemoJob[] = [
   {
     id: "sample-001",
+    level: "Junior",
+    employmentType: "Toàn thời gian",
     title: "Data Engineer",
     company: "Doanh nghiệp công nghệ mẫu A",
     location: "TP. Hồ Chí Minh",
@@ -46,6 +54,8 @@ export const demoJobs: DemoJob[] = [
   },
   {
     id: "sample-002",
+    level: "Middle",
+    employmentType: "Toàn thời gian",
     title: "Backend Developer (Python)",
     company: "Công ty sản phẩm mẫu B",
     location: "Hà Nội",
@@ -67,6 +77,8 @@ export const demoJobs: DemoJob[] = [
   },
   {
     id: "sample-003",
+    level: "Fresher",
+    employmentType: "Toàn thời gian",
     title: "Data Analyst",
     company: "Công ty dữ liệu mẫu C",
     location: "TP. Hồ Chí Minh",
@@ -88,6 +100,8 @@ export const demoJobs: DemoJob[] = [
   },
   {
     id: "sample-004",
+    level: "Junior",
+    employmentType: "Bán thời gian",
     title: "Frontend Developer",
     company: "Công ty sản phẩm mẫu D",
     location: "Đà Nẵng",
@@ -109,6 +123,8 @@ export const demoJobs: DemoJob[] = [
   },
   {
     id: "sample-005",
+    level: "Senior",
+    employmentType: "Toàn thời gian",
     title: "DevOps Engineer",
     company: "Đơn vị hạ tầng mẫu E",
     location: "Remote",
@@ -130,6 +146,8 @@ export const demoJobs: DemoJob[] = [
   },
   {
     id: "sample-006",
+    level: "Intern",
+    employmentType: "Thực tập",
     title: "QA Automation Engineer",
     company: "Công ty phần mềm mẫu F",
     location: "Hà Nội",
@@ -151,6 +169,8 @@ export const demoJobs: DemoJob[] = [
   },
   {
     id: "sample-007",
+    level: "Fresher",
+    employmentType: "Toàn thời gian",
     title: "BI Developer",
     company: "Doanh nghiệp phân tích mẫu G",
     location: "TP. Hồ Chí Minh",
@@ -172,6 +192,8 @@ export const demoJobs: DemoJob[] = [
   },
   {
     id: "sample-008",
+    level: "Middle",
+    employmentType: "Toàn thời gian",
     title: "Java Backend Developer",
     company: "Công ty giải pháp mẫu H",
     location: "Hà Nội",
