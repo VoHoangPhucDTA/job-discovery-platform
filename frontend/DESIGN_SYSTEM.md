@@ -53,21 +53,26 @@ Use semantic CSS variables, not raw colors inside page components. The canonical
 | `--danger-soft` | `#FEF2F2` | Error background |
 | `--info` | `#0369A1` | Informational states |
 | `--info-soft` | `#F0F9FF` | Informational background |
+| `--chart-1` | `#2563EB` | Primary chart series |
+| `--chart-2` | `#0F766E` | Secondary chart series |
+| `--chart-3` | `#7C3AED` | Tertiary chart series |
+| `--chart-4` | `#D97706` | Quaternary chart series |
+| `--chart-5` | `#64748B` | Neutral chart series |
 
 ### Color usage constraints
 
 - Primary blue is the only dominant brand/action color. Teal is a supporting data accent, not a second primary.
 - Green, amber, and red communicate meaning only; do not use them as decoration.
 - Do not encode status using color alone. Pair with text and/or an icon.
-- Charts use a restrained palette: primary blue, teal, violet, amber, slate. Keep the same series-to-color mapping across pages. Avoid rainbow charts.
+- Charts use the fixed `--chart-1` through `--chart-5` palette (blue, teal, violet, amber, slate). Keep the same series-to-color mapping across pages. Avoid rainbow charts.
 - Use muted text for metadata, not for essential labels or important data.
 - Do not add gradients to buttons, cards, or the app background.
 
 ## 4. Typography
 
 **Font family**
-- UI and headings: Geist Sans via the existing Next font setup.
-- Technical/tabular values: Geist Mono via the existing Next font setup.
+- UI and headings: Geist Sans via the existing Next font setup, loading both `latin` and `vietnamese` subsets.
+- Technical/tabular values: Geist Mono via the existing Next font setup, loading both `latin` and `vietnamese` subsets.
 - Do not use Arial, system font stacks, or a new Google font as a page-level override.
 
 **Type scale**
@@ -127,6 +132,8 @@ Layout rules:
 | `--radius-md` | 10px | Inputs, buttons, cards |
 | `--radius-lg` | 14px | Large panels, dialogs |
 | `--radius-xl` | 18px | Hero/featured surface only |
+
+These radius values are exposed as Tailwind utilities through the global theme: `rounded-sm`, `rounded-md`, `rounded-lg`, and `rounded-xl`.
 
 - Default card: white surface, 1px border, 10–14px radius, no heavy shadow.
 - Default input/button height: 40px; compact control: 32px; prominent action: 44px.
