@@ -159,6 +159,21 @@ Navigation labels are fixed for v1:
 
 Use the same active state, icon size, spacing, and hover/focus treatment on every route. Do not create a different header for analytics or pipeline pages.
 
+## 7.1 Shared component implementation
+
+The first shared UI foundation lives in these locations:
+
+| Component | Canonical file | Responsibility |
+|---|---|---|
+| Application shell | `app/components/shell/app-shell.tsx` | Shared sidebar, responsive navigation, top bar, content area, and footer |
+| Button / ButtonLink | `app/components/ui/button.tsx` | Consistent action and link treatments |
+| Card | `app/components/ui/card.tsx` | Shared bordered surface and padding primitives |
+| Badge | `app/components/ui/badge.tsx` | Neutral and semantic status/category labels |
+| PageHeader | `app/components/ui/page-header.tsx` | Consistent page title, description, eyebrow, and actions |
+| SectionPlaceholder | `app/components/ui/section-placeholder.tsx` | Explicit unavailable / in-progress page state |
+
+The root layout mounts the App Shell. The shell is a Client Component only because it uses `usePathname` for active navigation and local state for the mobile menu. Keep page content and static primitives server-rendered where possible. The four v1 routes are static route segments; revisit the documented `Suspense` requirement if a future dynamic route with unknown params is added while Cache Components are enabled.
+
 ## 8. Component rules
 
 ### Buttons
