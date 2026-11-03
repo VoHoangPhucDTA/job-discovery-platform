@@ -57,7 +57,7 @@ These rules apply to every UI change in this frontend. They complement (and do n
 
 ## 5. Fonts and metadata
 
-- Keep Geist Sans for interface text and Geist Mono for technical or tabular values, using the existing `next/font` setup.
+- Keep Geist Sans for interface text and Geist Mono for technical or tabular values, using the existing `next/font` setup. Load both `latin` and `vietnamese` subsets so Vietnamese text uses the intended font.
 - Do not add remote runtime font requests or another font family without approval and a design-system update.
 - Keep application language set to Vietnamese (`lang="vi"`).
 - Define static metadata in Server Component layouts/pages with the Next.js `Metadata` type. Do not export metadata from a Client Component.
