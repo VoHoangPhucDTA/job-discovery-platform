@@ -168,13 +168,13 @@ export default function Home() {
           </div>
 
           <div className="space-y-3">
-            <h1 className="max-w-2xl text-[34px] leading-[1.16] font-bold tracking-tight text-foreground sm:text-display">
+            <h1 className="max-w-2xl text-page-title font-bold tracking-tight text-foreground sm:text-display">
               Tìm cơ hội IT.
               <span className="block text-primary">
                 Hiểu thị trường bằng dữ liệu.
               </span>
             </h1>
-            <p className="max-w-2xl text-body text-muted-foreground sm:text-[15px] sm:leading-6">
+            <p className="max-w-2xl text-body text-muted-foreground">
               Khám phá tin tuyển dụng từ nhiều nguồn, tìm kiếm theo tiêu chí
               của bạn và nhìn rộng hơn về nhu cầu nhân lực IT tại Việt Nam.
             </p>
@@ -298,7 +298,7 @@ export default function Home() {
                 Tìm kiếm và lọc cơ hội trong một giao diện thống nhất.
               </p>
             </div>
-            <div className="space-y-1.5 border-border sm:border-l sm:pl-4">
+            <div className="space-y-1.5">
               <p className="text-body-emphasis font-semibold text-foreground">
                 Có nguồn gốc
               </p>
