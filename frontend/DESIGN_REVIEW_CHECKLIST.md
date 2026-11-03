@@ -10,10 +10,12 @@ Run this checklist before marking any Job Discovery Platform page or component c
 ## Visual tokens
 - [ ] Uses the canonical color variables; no page-local brand hex colors.
 - [ ] Uses semantic typography utilities from app/globals.css where applicable.
+- [ ] Geist Sans and Geist Mono load both latin and vietnamese subsets.
 - [ ] Vietnamese diacritics render correctly with the selected font/fallback stack.
 - [ ] Uses Geist Sans for UI and Geist Mono only for technical/tabular content.
 - [ ] Uses the shared type scale and heading hierarchy (one H1).
 - [ ] Uses the 4px spacing scale and approved radius/elevation values.
+- [ ] Uses shared Tailwind radius utilities and the approved chart color tokens.
 - [ ] Cards, inputs, buttons, badges, tables, and chart typography match shared primitives.
 - [ ] No unapproved gradients, heavy shadows, decorative effects, or dark theme.
 
