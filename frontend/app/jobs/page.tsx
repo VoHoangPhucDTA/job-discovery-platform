@@ -1,5 +1,5 @@
 import { PageHeader } from "../components/ui/page-header";
-import { SectionPlaceholder } from "../components/ui/section-placeholder";
+import { JobsBrowser } from "./jobs-browser";
 
 export const metadata = {
   title: "Việc làm",
@@ -8,16 +8,13 @@ export const metadata = {
 
 export default function JobsPage() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <PageHeader
         eyebrow="VIỆC LÀM IT"
         title="Việc làm IT"
-        description="Tìm kiếm và khám phá cơ hội nghề nghiệp từ các nguồn tuyển dụng IT."
+        description="Tìm kiếm cơ hội nghề nghiệp theo vị trí, kỹ năng, địa điểm và mức lương."
       />
-      <SectionPlaceholder
-        title="Không gian khám phá việc làm"
-        description="Danh sách tin tuyển dụng, tìm kiếm từ khóa và bộ lọc theo địa điểm, mức lương, danh mục và thời gian đăng sẽ được xây dựng tại đây."
-      />
+      <JobsBrowser />
     </div>
   );
 }
