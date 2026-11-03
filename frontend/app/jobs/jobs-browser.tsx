@@ -71,13 +71,6 @@ function JobCard({ job }: { job: DemoJob }) {
             {job.location}
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <svg aria-hidden="true" viewBox="0 0 20 20" className="size-4" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <circle cx="10" cy="10" r="7" />
-              <path d="M10 6v4l2.5 1.5" strokeLinecap="round" />
-            </svg>
-            {job.postedLabel}
-          </span>
-          <span className="inline-flex items-center gap-1.5">
             <span className="size-1.5 rounded-full bg-subtle-foreground" />
             {job.source}
           </span>
@@ -334,7 +327,11 @@ export function JobsBrowser() {
               >
                 Cơ hội việc làm
               </h2>
-              <p className="mt-1 text-small text-muted-foreground">
+              <p
+                className="mt-1 text-small text-muted-foreground"
+                role="status"
+                aria-live="polite"
+              >
                 {filteredJobs.length} tin minh họa phù hợp với điều kiện tìm kiếm
               </p>
             </div>
