@@ -10,7 +10,7 @@ export default function JobsPage() {
   return (
     <div className="space-y-8">
       <PageHeader
-        eyebrow="JOB DISCOVERY"
+        eyebrow="VIỆC LÀM IT"
         title="Việc làm IT"
         description="Tìm kiếm và khám phá cơ hội nghề nghiệp từ các nguồn tuyển dụng IT."
       />
