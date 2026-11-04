@@ -26,9 +26,14 @@ Run this checklist before marking any Job Discovery Platform page or component c
 - [ ] No unapproved gradients, heavy shadows, decorative effects, raw one-off brand colors, or dark theme.
 
 ## Home / overview
-- [ ] Home explains the multi-source IT job discovery value in one concise hero.
+- [ ] Home hero uses one large H1 level only, with no eyebrow label or secondary description.
+- [ ] The H1 cycles through all three approved Vietnamese messages by typing, pausing, deleting, then repeating.
+- [ ] The hero reserves height for the longest message and respects `prefers-reduced-motion`.
 - [ ] Home uses one vertically stacked layout; no split hero, content columns, or left sidebar.
 - [ ] Keyword search and all six filters submit their values to the Jobs route.
+- [ ] Dropdown default labels omit “Tất cả” while retaining the underlying unfiltered value.
+- [ ] The gap from the Home search/filter card to “Khám phá theo lĩnh vực” is 36px on mobile and 40px at desktop widths.
+- [ ] The category section has no explanatory paragraph and its text-only chips have no trailing arrows.
 - [ ] Category shortcuts open Jobs with the selected category pre-applied.
 - [ ] TopCV and VietnamWorks are the only named recruitment sources.
 - [ ] Home contains no ETL explanation, pipeline diagram/status, or technical portfolio pitch.
