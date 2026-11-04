@@ -1,6 +1,6 @@
 # Job Discovery Platform — Frontend Design System
 
-> **Status:** v1.6 · **Scope:** all frontend routes and shared components  
+> **Status:** v1.7 · **Scope:** all frontend routes and shared components  
 > **Product direction:** Modern Data Product — clear, trustworthy, data-focused, Vietnamese-first.
 
 This document is the single source of truth for visual and interaction decisions. Home, Jobs, Market Insights, and Data Pipeline must feel like one product. Page-specific variation is allowed only where it improves the task; it must not create a separate visual language.
@@ -24,7 +24,7 @@ This document is the single source of truth for visual and interaction decisions
 - Personality: professional, calm, precise, helpful, credible.
 - Product impression: a real Vietnamese job-market discovery product with a data platform behind it.
 - Visual balance: product-first, not generic admin dashboard; charts and operational details support the product story.
-- Decoration: restrained. Prefer whitespace, alignment, clear hierarchy, and subtle borders over gradients, glassmorphism, oversized shadows, or decorative blobs.
+- Decoration: restrained. Prefer whitespace, alignment, clear hierarchy, and subtle borders. The Home hero is an approved exception: a soft blue gradient and abstract wave backdrop may be used inside the banner only; do not extend this treatment to the app background, other routes, buttons, or ordinary cards.
 - Copy: Vietnamese for user-facing interface, including navigation labels, section eyebrows, badges, and helper text. Keep established technical terms and product names where clearer (ETL, API, Data Pipeline, Data Warehouse, SQL, TopCV, VietnamWorks). Avoid mixing English decorative labels into otherwise Vietnamese sections.
 
 ## 3. Color tokens
@@ -196,8 +196,8 @@ The Home route is a job-discovery entry point for people who want to search IT v
 
 Keep this single-column, vertically stacked content order:
 
-1. A single-level, large H1 hero with no eyebrow label or secondary description. Rotate these three Vietnamese messages in sequence: “Loay hoay tìm kiếm các công việc từ nhiều nền tảng”, “Không biết nên ứng tuyển công việc ở đâu”, and “Tốn thời gian tìm kiếm công việc từ nhiều nền tảng?” Use a typewriter sequence (type the full message, pause, delete it, then move to the next message and loop). Reserve enough heading height for the longest message so the search section does not jump while the text changes. Respect `prefers-reduced-motion` by showing a complete static message instead of animating.
-2. Directly below the H1, show one restrained white letter-style card with the exact copy: “Hiểu được những khó khăn đó.” followed by “GomViệc tổng hợp việc làm từ nhiều nền tảng, giúp bạn tìm kiếm và lọc công việc nhanh hơn mà không cần lướt từng website.” Keep it text-first, left-aligned, without an extra eyebrow, mascot, sticker, or separate call-to-action. The card is supporting copy, not a second hero headline.
+1. A single-level, large H1 hero with no eyebrow label or secondary description. The banner may use a contained pale-blue gradient, abstract flowing wave shapes, and subtle source-name chips as decorative context. Keep the treatment restrained and contained to the banner. Rotate these three Vietnamese messages in sequence: “Loay hoay tìm kiếm các công việc từ nhiều nền tảng”, “Không biết nên ứng tuyển công việc ở đâu”, and “Tốn thời gian tìm kiếm công việc từ nhiều nền tảng?” Use a slower typewriter sequence (type the full message at approximately 55ms per character, hold for about 3.5 seconds, delete at approximately 32ms per character, then pause briefly before the next message and loop). Reserve enough heading height for the longest message so the search section does not jump while the text changes. Respect `prefers-reduced-motion` by showing a complete static message instead of animating.
+2. Directly below the H1, show one restrained white paper-letter card with a subtle folded-corner detail and soft shadow, using the exact copy: “Hiểu được những khó khăn đó.” followed by “GomViệc tổng hợp việc làm từ nhiều nền tảng, giúp bạn tìm kiếm và lọc công việc nhanh hơn mà không cần lướt từng website.” Keep it text-first, left-aligned, without an extra eyebrow, mascot, sticker, or separate call-to-action. The card is supporting copy, not a second hero headline.
 2. One full-width keyword search for role, skill, or company.
 3. A compact, responsive horizontal filter row: career level, salary, location, employment type, category, and posting date. The default visible labels are “Cấp bậc”, “Mức lương”, “Địa điểm”, “Hình thức”, “Lĩnh vực”, and “Thời gian đăng” (do not prefix them with “Tất cả”); the underlying unfiltered value remains unchanged. Submit the selected criteria to the Jobs route.
 4. Clickable, text-only category shortcuts (Data, Backend, Frontend, DevOps, QA) that open Jobs with the matching category preselected. Do not add explanatory copy beneath the section title or trailing arrow glyphs to the shortcuts.
