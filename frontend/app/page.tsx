@@ -59,7 +59,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section aria-labelledby="job-search-title" className="mx-auto mt-8 w-full max-w-5xl">
+      <section aria-labelledby="job-search-title" className="mx-auto mt-6 w-full max-w-5xl">
         <Card className="space-y-4 p-4 sm:p-5">
           <h2 id="job-search-title" className="text-card-title font-semibold text-foreground">
             Tìm kiếm việc làm
@@ -155,7 +155,7 @@ export default function Home() {
         </Card>
       </section>
 
-      <section aria-labelledby="category-title" className="mt-9 space-y-4 sm:mt-10">
+      <section aria-labelledby="category-title" className="mt-6 space-y-4">
         <h2 id="category-title" className="text-section-title font-semibold text-foreground">
           Khám phá theo lĩnh vực
         </h2>
@@ -174,26 +174,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section aria-labelledby="sources-title" className="mt-10 border-t border-border pt-6 sm:mt-12">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div className="space-y-1">
-            <h2 id="sources-title" className="text-body-emphasis font-semibold text-foreground">
-              Nguồn tuyển dụng hiện được tổng hợp
-            </h2>
-            <p className="text-small text-muted-foreground">
-              Phạm vi nguồn dữ liệu hiện tại của dự án.
-            </p>
-          </div>
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-md border border-border bg-surface px-3 py-2 text-body-emphasis font-semibold text-foreground">
-              TopCV
-            </span>
-            <span className="rounded-md border border-border bg-surface px-3 py-2 text-body-emphasis font-semibold text-foreground">
-              VietnamWorks
-            </span>
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 }
