@@ -52,16 +52,27 @@ export function HomeHeroHeading() {
     };
   }, [isDeleting, messageIndex, visibleText]);
 
+  const firstLineLength = [
+    "Loay hoay tìm kiếm các",
+    "Không biết nên ứng tuyển",
+    "Tốn thời gian tìm kiếm",
+  ][messageIndex].length;
+  const firstLine = visibleText.slice(0, firstLineLength);
+  const secondLine = visibleText.length > firstLineLength
+    ? visibleText.slice(firstLineLength + 1)
+    : "";
+
   return (
     <h1
       aria-label="Tìm kiếm việc làm từ nhiều nền tảng và nhanh chóng tìm được công việc phù hợp."
-      className="mx-0 flex min-h-[190px] w-full max-w-3xl items-center justify-start text-left text-page-title font-bold leading-tight tracking-tight text-foreground min-[480px]:min-h-[152px] sm:min-h-[176px] sm:text-display md:min-h-[144px]"
+      className="mx-auto flex min-h-[190px] w-full items-center justify-center text-center text-page-title font-bold leading-tight tracking-tight text-foreground sm:min-h-[176px] sm:text-display md:min-h-[144px]"
     >
-      <span aria-hidden="true">{visibleText}</span>
-      <span
-        aria-hidden="true"
-        className="ml-1 inline-block h-[0.85em] w-[2px] shrink-0 rounded-full bg-primary motion-safe:animate-pulse"
-      />
+      <span aria-hidden="true" className="block w-full text-balance">
+        {firstLine}
+        <br />
+        {secondLine}
+        <span className="ml-1 inline-block h-[0.85em] w-[2px] align-baseline rounded-full bg-primary motion-safe:animate-pulse" />
+      </span>
     </h1>
   );
 }
