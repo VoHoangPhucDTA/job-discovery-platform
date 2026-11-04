@@ -1,6 +1,6 @@
 # Job Discovery Platform — Frontend Design System
 
-> **Status:** v2.0 · **Scope:** all frontend routes and shared components  
+> **Status:** v2.1 · **Scope:** all frontend routes and shared components  
 > **Product direction:** Modern Data Product — clear, trustworthy, data-focused, Vietnamese-first.
 
 This document is the single source of truth for visual and interaction decisions. Home, Jobs, Market Insights, and Data Pipeline must feel like one product. Page-specific variation is allowed only where it improves the task; it must not create a separate visual language.
@@ -206,6 +206,27 @@ Keep this single-column, vertically stacked content order:
 On Home, keep the gap between the hero and search/filter card at 24px. Keep the gap between the search/filter card and category section at 24px. The Home page does not render a recruitment-source strip or shared footer; use modest bottom padding after the category shortcuts. The shared shell has no footer in v2.0.
 
 Do not split the Home hero into columns. Do not show a left sidebar, architecture diagram, ETL explanation, pipeline status, data-engineering journey cards, market KPIs, fabricated job counts, salary averages, match percentages, testimonials, or unsupported AI features on Home. Data Pipeline remains a separate navigation route for technical reviewers. Do not add a latest-jobs section until a real jobs API is available; never populate it with demo fixtures without an explicit sample-data label.
+
+## 7.3 Market Insights page rules
+
+Market Insights helps job seekers make decisions. It is not a KPI dashboard built to display as many charts as possible.
+
+Use this content order:
+1. Page title and a concise explanation of the page's user benefit.
+2. A compact analysis-filter group: category, career level, location, work mode (On-site / Hybrid / Remote), and employment type (Full-time / Part-time / Internship).
+3. Opportunity matrix by category and career level, including a separate unclassified group. Desktop may use a contained matrix; mobile must use readable category cards rather than forcing page-level horizontal scrolling.
+4. Skills mentioned in eligible job descriptions. Show the number of eligible descriptions and the denominator for each frequency; do not claim a skill is mandatory unless the source data explicitly distinguishes requirements.
+5. Location, work mode, and employment type. Keep location separate from work mode; Remote is never a location.
+6. Published salary information, only after normalizing pay period, currency/unit, and Gross/Net context. Prefer P25–P75 and median with the number of salary-disclosing jobs and the calculation method.
+7. Data scope and methodology, including sources, observation/update time, analyzed record count, and relevant limitations when those values are available.
+
+Data and interaction rules:
+- Do not reuse Jobs demo fixtures as market analytics data. Do not generate sample metrics, percentages, skill frequencies, salary values, rankings, or trend conclusions in the live route.
+- While no verified analysis dataset/API is available, show an explicit unavailable state for each affected section. Disabled filters must be visibly identified as unavailable. A missing value is not zero.
+- Each metric must include a meaningful denominator and a clear scope. Skill frequency is calculated only over descriptions that pass the eligibility rules; salary statistics exclude negotiated or otherwise non-comparable values and explain their scope.
+- The current project source scope is TopCV and VietnamWorks. State that the analysis describes collected records from supported sources, not the entire Vietnamese IT labor market.
+- Do not add market forecasts, “hottest industry” claims, geographic maps, or time-trend charts until historical coverage and data quality have been validated.
+- Prefer a concise list or matrix over a chart when that makes comparison and follow-through to relevant jobs clearer. Every future interactive insight should lead to a corresponding Jobs result only when the destination filter can be supported by the real Jobs API.
 
 ## 8. Component rules
 
