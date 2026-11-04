@@ -70,3 +70,9 @@ Run this checklist before marking any Job Discovery Platform page or component c
 - [ ] Global element resets are inside @layer base and do not override Tailwind utilities.
 - [ ] Root document uses lang=vi and has product metadata.
 - [ ] Lint/build checks pass, or the exact blocker is documented.
+
+
+## Brand and decorative restraint
+- [ ] Header brand displays only the Job Discovery wordmark; no oversized JD tile or monogram.
+- [ ] Filter dropdowns and category chips use text labels without icons.
+- [ ] Recruitment-source strip has no database icon or decorative data symbol.
