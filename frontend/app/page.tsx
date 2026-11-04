@@ -3,6 +3,7 @@ import { Button } from "./components/ui/button";
 import { Card } from "./components/ui/card";
 import { Input } from "./components/ui/input";
 import { Select } from "./components/ui/select";
+import { HomeHeroHeading } from "./components/home-hero-heading";
 
 const categories = [
   { label: "Data", value: "Data", description: "Data Engineer, Data Analyst, BI" },
@@ -14,22 +15,12 @@ const categories = [
 
 export default function Home() {
   return (
-    <div className="space-y-10 sm:space-y-12">
-      <section className="mx-auto w-full max-w-4xl space-y-4 pt-2 text-center sm:pt-6">
-        <p className="text-small font-semibold uppercase tracking-[0.12em] text-primary">
-          VIỆC LÀM IT TỪ NHIỀU NỀN TẢNG
-        </p>
-        <h1 className="mx-auto max-w-3xl text-page-title font-bold tracking-tight text-foreground sm:text-display">
-          Cơ hội việc làm IT,
-          <span className="block text-primary">tập trung tại một nơi.</span>
-        </h1>
-        <p className="mx-auto max-w-2xl text-body text-muted-foreground sm:text-base sm:leading-7">
-          Tìm kiếm, lọc và khám phá tin tuyển dụng từ nhiều nền tảng trên cùng
-          một giao diện. Không cần chuyển qua lại giữa nhiều website.
-        </p>
+    <div className="flex flex-col">
+      <section className="mx-auto w-full max-w-4xl pt-2 text-center sm:pt-6">
+        <HomeHeroHeading />
       </section>
 
-      <section aria-labelledby="job-search-title" className="mx-auto w-full max-w-5xl">
+      <section aria-labelledby="job-search-title" className="mx-auto mt-10 w-full max-w-5xl sm:mt-12">
         <Card className="space-y-4 p-4 sm:p-5">
           <h2 id="job-search-title" className="text-card-title font-semibold text-foreground">
             Tìm kiếm việc làm
@@ -69,7 +60,7 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-6">
               <label className="sr-only" htmlFor="home-level">Cấp bậc</label>
               <Select id="home-level" name="level" aria-label="Lọc theo cấp bậc" defaultValue="all">
-                <option value="all">Tất cả cấp bậc</option>
+                <option value="all">Cấp bậc</option>
                 <option value="Intern">Intern</option>
                 <option value="Fresher">Fresher</option>
                 <option value="Junior">Junior</option>
@@ -79,7 +70,7 @@ export default function Home() {
 
               <label className="sr-only" htmlFor="home-salary">Mức lương</label>
               <Select id="home-salary" name="salary" aria-label="Lọc theo mức lương" defaultValue="all">
-                <option value="all">Tất cả mức lương</option>
+                <option value="all">Mức lương</option>
                 <option value="under-10">Dưới 10 triệu</option>
                 <option value="10-20">10–20 triệu</option>
                 <option value="20-30">20–30 triệu</option>
@@ -88,7 +79,7 @@ export default function Home() {
 
               <label className="sr-only" htmlFor="home-location">Địa điểm</label>
               <Select id="home-location" name="location" aria-label="Lọc theo địa điểm" defaultValue="all">
-                <option value="all">Tất cả địa điểm</option>
+                <option value="all">Địa điểm</option>
                 <option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
                 <option value="Hà Nội">Hà Nội</option>
                 <option value="Đà Nẵng">Đà Nẵng</option>
@@ -97,7 +88,7 @@ export default function Home() {
 
               <label className="sr-only" htmlFor="home-employment">Hình thức làm việc</label>
               <Select id="home-employment" name="employment" aria-label="Lọc theo hình thức làm việc" defaultValue="all">
-                <option value="all">Tất cả hình thức</option>
+                <option value="all">Hình thức</option>
                 <option value="Toàn thời gian">Toàn thời gian</option>
                 <option value="Bán thời gian">Bán thời gian</option>
                 <option value="Thực tập">Thực tập</option>
@@ -105,7 +96,7 @@ export default function Home() {
 
               <label className="sr-only" htmlFor="home-category">Lĩnh vực</label>
               <Select id="home-category" name="category" aria-label="Lọc theo lĩnh vực" defaultValue="all">
-                <option value="all">Tất cả lĩnh vực</option>
+                <option value="all">Lĩnh vực</option>
                 <option value="Backend">Backend</option>
                 <option value="Data">Data</option>
                 <option value="Frontend">Frontend</option>
@@ -115,7 +106,7 @@ export default function Home() {
 
               <label className="sr-only" htmlFor="home-posted">Thời gian đăng</label>
               <Select id="home-posted" name="posted" aria-label="Lọc theo thời gian đăng" defaultValue="all">
-                <option value="all">Mọi thời điểm</option>
+                <option value="all">Thời gian đăng</option>
                 <option value="1">24 giờ qua</option>
                 <option value="7">7 ngày qua</option>
                 <option value="30">30 ngày qua</option>
@@ -125,15 +116,10 @@ export default function Home() {
         </Card>
       </section>
 
-      <section aria-labelledby="category-title" className="space-y-4">
-        <div className="space-y-1">
-          <h2 id="category-title" className="text-section-title font-semibold text-foreground">
-            Khám phá theo lĩnh vực
-          </h2>
-          <p className="text-small text-muted-foreground">
-            Chọn nhóm công việc bạn quan tâm để xem các cơ hội liên quan.
-          </p>
-        </div>
+      <section aria-labelledby="category-title" className="mt-9 space-y-4 sm:mt-10">
+        <h2 id="category-title" className="text-section-title font-semibold text-foreground">
+          Khám phá theo lĩnh vực
+        </h2>
 
         <div className="flex flex-wrap gap-2">
           {categories.map((category) => (
@@ -144,13 +130,12 @@ export default function Home() {
               className="inline-flex min-h-10 items-center rounded-md border border-border bg-surface px-4 text-body font-medium text-foreground transition-colors hover:border-primary/50 hover:bg-primary-soft hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               {category.label}
-              <span aria-hidden="true" className="ml-2 text-muted-foreground">→</span>
             </Link>
           ))}
         </div>
       </section>
 
-      <section aria-labelledby="sources-title" className="border-t border-border pt-6">
+      <section aria-labelledby="sources-title" className="mt-10 border-t border-border pt-6 sm:mt-12">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-1">
             <h2 id="sources-title" className="text-body-emphasis font-semibold text-foreground">
