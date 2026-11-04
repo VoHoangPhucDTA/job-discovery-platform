@@ -161,17 +161,11 @@ export function AppShell({ children }: { children: ReactNode }) {
 
       <main className={[
         "mx-auto flex w-full max-w-content flex-1 flex-col px-4 sm:px-6 lg:px-8",
-        pathname === "/" ? "py-0" : "py-6 sm:py-8",
+        pathname === "/" ? "pb-6 pt-0" : "py-6 sm:py-8",
       ].join(" ")}>
         {children}
       </main>
 
-      <footer className="border-t border-border bg-surface px-4 py-4 sm:px-6 lg:px-8">
-        <div className="mx-auto flex w-full max-w-content flex-col gap-1 text-small text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <span>GomViệc</span>
-          <span>Khám phá thị trường việc làm IT Việt Nam từ dữ liệu.</span>
-        </div>
-      </footer>
     </div>
   );
 }
