@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 
 const messages = [
-  "Loay hoay tìm kiếm các công việc từ nhiều nền tảng",
-  "Không biết nên ứng tuyển công việc ở đâu",
+  "Loay hoay tìm kiếm công việc từ nhiều nền tảng?",
+  "Không biết nên ứng tuyển công việc ở đâu?",
   "Tốn thời gian tìm kiếm công việc từ nhiều nền tảng?",
 ] as const;
 
@@ -53,7 +53,7 @@ export function HomeHeroHeading() {
   }, [isDeleting, messageIndex, visibleText]);
 
   const firstLineLength = [
-    "Loay hoay tìm kiếm các",
+    "Loay hoay tìm kiếm",
     "Không biết nên ứng tuyển",
     "Tốn thời gian tìm kiếm",
   ][messageIndex].length;
