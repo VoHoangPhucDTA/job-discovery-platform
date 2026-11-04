@@ -16,10 +16,10 @@ function Brand() {
     <Link
       href="/"
       className="flex shrink-0 items-center gap-2.5 rounded-md outline-offset-4"
-      aria-label="Job Discovery Platform - về trang tổng quan"
+      aria-label="GomViệc - về trang tổng quan"
     >
       <span className="text-lg font-semibold tracking-tight text-foreground">
-        Job Discovery
+        Gom<span className="text-primary">Việc</span>
       </span>
     </Link>
   );
@@ -165,7 +165,7 @@ export function AppShell({ children }: { children: ReactNode }) {
 
       <footer className="border-t border-border bg-surface px-4 py-4 sm:px-6 lg:px-8">
         <div className="mx-auto flex w-full max-w-content flex-col gap-1 text-small text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <span>Job Discovery Platform</span>
+          <span>GomViệc</span>
           <span>Khám phá thị trường việc làm IT Việt Nam từ dữ liệu.</span>
         </div>
       </footer>
