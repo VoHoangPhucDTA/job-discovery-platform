@@ -26,7 +26,10 @@ Run this checklist before marking any Job Discovery Platform page or component c
 - [ ] No unapproved gradients, heavy shadows, decorative effects, raw one-off brand colors, or dark theme.
 
 ## Home / overview
+- [ ] Header and public-facing brand use the “GomViệc” wordmark; “Job Discovery Platform” remains only a technical project identity.
 - [ ] Home hero uses one large H1 level only, with no eyebrow label or secondary description.
+- [ ] The H1 rotates through the approved three messages; the third message is “Tốn thời gian tìm kiếm công việc từ nhiều nền tảng?”.
+- [ ] A restrained letter-style card below the H1 contains “Hiểu được những khó khăn đó.” and the approved GomViệc summary sentence; no extra eyebrow or decorative illustration is added.
 - [ ] The H1 cycles through all three approved Vietnamese messages by typing, pausing, deleting, then repeating.
 - [ ] The hero reserves height for the longest message and respects `prefers-reduced-motion`.
 - [ ] Home uses one vertically stacked layout; no split hero, content columns, or left sidebar.
@@ -81,6 +84,6 @@ Run this checklist before marking any Job Discovery Platform page or component c
 
 
 ## Brand and decorative restraint
-- [ ] Header brand displays only the Job Discovery wordmark; no oversized JD tile or monogram.
+- [ ] Header brand displays only the GomViệc wordmark, with “Gom” in foreground and “Việc” in primary blue; no oversized monogram or decorative logo icon.
 - [ ] Filter dropdowns and category chips use text labels without icons.
 - [ ] Recruitment-source strip has no database icon or decorative data symbol.
