@@ -31,7 +31,7 @@ export function HomeHeroHeading() {
       timeoutId = window.setTimeout(() => {
         setIsDeleting(false);
         setMessageIndex((currentIndex) => (currentIndex + 1) % messages.length);
-      }, 0);
+      }, 650);
     } else {
       timeoutId = window.setTimeout(
         () => {
