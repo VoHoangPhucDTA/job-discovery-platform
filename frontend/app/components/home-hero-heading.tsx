@@ -55,7 +55,7 @@ export function HomeHeroHeading() {
   return (
     <h1
       aria-label="Tìm kiếm việc làm từ nhiều nền tảng và nhanh chóng tìm được công việc phù hợp."
-      className="mx-auto flex min-h-[228px] w-full max-w-4xl items-center justify-center text-page-title font-bold tracking-tight text-foreground sm:min-h-[144px] sm:text-display"
+      className="mx-auto flex min-h-[228px] w-full max-w-4xl items-center justify-center text-page-title font-bold tracking-tight text-foreground min-[375px]:min-h-[190px] min-[480px]:min-h-[152px] sm:min-h-[176px] sm:text-display md:min-h-[144px]"
     >
       <span aria-hidden="true">{visibleText}</span>
       <span
