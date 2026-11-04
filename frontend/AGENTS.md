@@ -100,5 +100,6 @@ Before a page or shared UI component is complete:
 
 Do not claim a build, test, or deployment passed unless it was actually run and its result was observed.
 
-- Keep the header brand as the plain “Job Discovery” wordmark; do not add an oversized JD monogram, boxed initials, or brand icon.
+- Use “GomViệc” as the public-facing brand wordmark. Style “Gom” with the foreground token and “Việc” with the primary blue token; do not add a subtitle, oversized monogram, boxed initials, or decorative brand icon.
+- Keep “Job Discovery Platform” as the repository/technical project identity; do not rename repository, packages, backend services, or deployment resources as part of a visual brand update.
 - Keep filter dropdowns and category chips text-only without leading icons. Keep the recruitment-source strip free of database icons or decorative data symbols.
