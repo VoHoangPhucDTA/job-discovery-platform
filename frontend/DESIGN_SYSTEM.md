@@ -304,3 +304,10 @@ A route is not complete until:
 - Keyboard focus and accessible labels are present.
 - No new one-off color, font, radius, shadow, or spacing system has been introduced.
 - The route passes the project lint/build checks when the local environment and required Next.js docs are available.
+
+
+## 10. Brand and icon restraint
+
+- The header brand is a simple **Job Discovery** wordmark. Do not add a large JD monogram, boxed initials, or a decorative brand icon.
+- Filter dropdowns and category chips use text labels only; do not add leading icons.
+- The recruitment-source strip is text-first and names TopCV and VietnamWorks without a database icon or decorative data symbol.
