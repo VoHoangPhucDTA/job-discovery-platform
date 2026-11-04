@@ -121,7 +121,7 @@ Layout rules:
 - Tablet gutters: 20px. Mobile gutters: 16px.
 - Standard page section gap: 24–32px. Related controls: 8–16px.
 - Use a 12-column grid at wide desktop when useful; collapse progressively instead of squeezing.
-- Job search/filter layouts may use a 280px filter rail plus flexible results on wide screens; stack filters above results on mobile.
+- Jobs uses a full-width search field followed by a horizontal filter row and a full-width results list. Never add a persistent filter rail to Jobs. At wide desktop, show six filters in one row; at laptop/tablet, wrap into two or three columns; on mobile, use two columns or stack when labels need more room.
 - Dashboard KPI cards: 4 columns on wide desktop, 2 on tablet, 1–2 on mobile depending on label length.
 - Avoid horizontal scrolling for the whole page. Only data tables may use a contained horizontal scroll when absolutely necessary.
 
@@ -139,7 +139,7 @@ These radius values are exposed as Tailwind utilities through the global theme: 
 - Default card: white surface, 1px border, 10–14px radius, no heavy shadow.
 - Default input/button height: 40px; compact control: 32px; prominent action: 44px.
 - Use subtle elevation only for popovers, menus, and dialogs. Cards should rely on border and spacing.
-- Keep card padding consistent: 20–24px desktop, 16px mobile.
+- Standard content cards use 20–24px desktop and 16px mobile padding. Compact job-list cards use 16px on desktop and mobile to keep more results visible without making each row feel dense.
 - Avoid nested cards unless there is a clear information hierarchy.
 
 ## 7. Shared application shell
@@ -187,7 +187,7 @@ The root layout mounts the App Shell. The shell is a Client Component only becau
 
 The Jobs route uses a client-side interaction layer in `app/jobs/jobs-browser.tsx` and typed sample fixtures in `app/jobs/demo-jobs.ts`. Its information order is fixed: keyword search first, a compact horizontal row of dropdown filters second, then the result count, sample-data note, sorting control, and full-width job list. The filter row wraps into two columns on narrow screens and must not become a fixed left rail. The page must retain a small but visible label that results are illustrative sample data until a real jobs API contract exists. Sample fixtures must never be described as live recruitment listings or be included in production API metrics.
 
-The v1 filter set includes career level, salary range, location, employment type, job category, and posting date. All filters must be usable together, reset together, and be applied consistently to keyword search and sorting.
+The v1 filter set includes career level, salary range, location, employment type, job category, and posting date. All filters must be usable together, reset together, and be applied consistently to keyword search and sorting. The Jobs search input and primary button use the shared 40px control height; keep the search card compact with 12px padding. Filter selects also use 40px height. Job-card metadata should be text-first and avoid decorative icons that do not improve recognition.
 
 ## 7.2 Home page content rules
 
