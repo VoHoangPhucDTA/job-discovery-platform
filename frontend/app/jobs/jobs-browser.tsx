@@ -41,7 +41,7 @@ const levelOptions: { value: LevelFilter; label: string }[] = [
 
 function JobCard({ job }: { job: DemoJob }) {
   return (
-    <Card className="p-4 transition-colors duration-150 hover:border-primary/40 sm:p-5">
+    <Card className="p-4 transition-colors duration-150 hover:border-primary/40">
       <article>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div className="min-w-0 flex-1">
@@ -68,25 +68,9 @@ function JobCard({ job }: { job: DemoJob }) {
         </div>
 
         <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-small text-muted-foreground">
-          <span className="inline-flex items-center gap-1.5">
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 20 20"
-              className="size-4"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            >
-              <path d="M16 8.3c0 4.1-6 9-6 9s-6-4.9-6-9a6 6 0 1 1 12 0Z" />
-              <circle cx="10" cy="8" r="2" />
-            </svg>
-            {job.location}
-          </span>
+          <span>{job.location}</span>
           <span>{job.employmentType}</span>
-          <span className="inline-flex items-center gap-1.5">
-            <span className="size-1.5 rounded-full bg-subtle-foreground" />
-            {job.source}
-          </span>
+          <span>{job.source}</span>
         </div>
 
         <div className="mt-3 flex flex-wrap gap-2">
@@ -244,7 +228,7 @@ export function JobsBrowser({ initialFilters = {} }: JobsBrowserProps) {
 
   return (
     <div className="space-y-5">
-      <Card className="space-y-3 p-3 sm:p-4">
+      <Card className="space-y-3 p-3">
         <form
           onSubmit={handleSearch}
           className="flex flex-col gap-2 sm:flex-row"
@@ -258,7 +242,7 @@ export function JobsBrowser({ initialFilters = {} }: JobsBrowserProps) {
             <svg
               aria-hidden="true"
               viewBox="0 0 20 20"
-              className="pointer-events-none absolute left-3 top-1/2 size-5 -translate-y-1/2 text-subtle-foreground"
+              className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-subtle-foreground"
               fill="none"
               stroke="currentColor"
               strokeWidth="1.7"
@@ -269,13 +253,13 @@ export function JobsBrowser({ initialFilters = {} }: JobsBrowserProps) {
             <Input
               id="job-keyword"
               type="search"
-              className="h-11 pl-10"
+              className="h-10 pl-9"
               placeholder="Tìm theo chức danh, kỹ năng hoặc công ty..."
               value={draftKeyword}
               onChange={(event) => setDraftKeyword(event.target.value)}
             />
           </div>
-          <Button type="submit" size="lg" className="sm:min-w-[132px]">
+          <Button type="submit" size="md" className="sm:min-w-28">
             Tìm kiếm
           </Button>
         </form>
@@ -394,7 +378,7 @@ export function JobsBrowser({ initialFilters = {} }: JobsBrowserProps) {
           <label className="flex items-center gap-2 text-small text-muted-foreground">
             <span className="shrink-0">Sắp xếp</span>
             <Select
-              className="w-auto min-w-[164px]"
+              className="h-10 w-auto min-w-[164px]"
               value={sort}
               onChange={(event) => setSort(event.target.value as SortOption)}
             >
