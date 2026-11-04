@@ -16,15 +16,15 @@ const geistMono = Geist_Mono({
 });
 
 const siteDescription =
-  "Khám phá cơ hội việc làm IT tại Việt Nam và theo dõi xu hướng thị trường tuyển dụng từ dữ liệu tổng hợp.";
+  "GomViệc giúp bạn khám phá và tìm kiếm cơ hội việc làm IT từ nhiều nền tảng.";
 
 export const metadata: Metadata = {
   title: {
-    default: "Job Discovery Platform",
-    template: "%s | Job Discovery Platform",
+    default: "GomViệc",
+    template: "%s | GomViệc",
   },
   description: siteDescription,
-  applicationName: "Job Discovery Platform",
+  applicationName: "GomViệc",
   keywords: [
     "IT jobs Vietnam",
     "việc làm IT",
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "vi_VN",
-    siteName: "Job Discovery Platform",
-    title: "Job Discovery Platform",
+    siteName: "GomViệc",
+    title: "GomViệc",
     description: siteDescription,
   },
 };
