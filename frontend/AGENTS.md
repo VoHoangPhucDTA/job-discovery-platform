@@ -99,3 +99,6 @@ Before a page or shared UI component is complete:
 6. Complete `DESIGN_REVIEW_CHECKLIST.md`.
 
 Do not claim a build, test, or deployment passed unless it was actually run and its result was observed.
+
+- Keep the header brand as the plain “Job Discovery” wordmark; do not add an oversized JD monogram, boxed initials, or brand icon.
+- Keep filter dropdowns and category chips text-only without leading icons. Keep the recruitment-source strip free of database icons or decorative data symbols.
