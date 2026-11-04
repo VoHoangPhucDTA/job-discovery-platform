@@ -26,7 +26,7 @@ export function HomeHeroHeading() {
     let timeoutId: number | undefined;
 
     if (!isDeleting && visibleText.length === currentMessage.length) {
-      timeoutId = window.setTimeout(() => setIsDeleting(true), 1900);
+      timeoutId = window.setTimeout(() => setIsDeleting(true), 3500);
     } else if (isDeleting && visibleText.length === 0) {
       timeoutId = window.setTimeout(() => {
         setIsDeleting(false);
@@ -41,7 +41,7 @@ export function HomeHeroHeading() {
               : currentMessage.slice(0, currentText.length + 1),
           );
         },
-        isDeleting ? 20 : 38,
+        isDeleting ? 32 : 55,
       );
     }
 
@@ -55,7 +55,7 @@ export function HomeHeroHeading() {
   return (
     <h1
       aria-label="Tìm kiếm việc làm từ nhiều nền tảng và nhanh chóng tìm được công việc phù hợp."
-      className="mx-auto flex min-h-[228px] w-full max-w-4xl items-center justify-center text-page-title font-bold tracking-tight text-foreground min-[375px]:min-h-[190px] min-[480px]:min-h-[152px] sm:min-h-[176px] sm:text-display md:min-h-[144px]"
+      className="mx-0 flex min-h-[190px] w-full max-w-3xl items-center justify-start text-left text-page-title font-bold leading-tight tracking-tight text-foreground min-[480px]:min-h-[152px] sm:min-h-[176px] sm:text-display md:min-h-[144px]"
     >
       <span aria-hidden="true">{visibleText}</span>
       <span
