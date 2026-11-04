@@ -48,6 +48,9 @@ Run this checklist before marking any Job Discovery Platform page or component c
 - [ ] No fabricated counts, salary values, timestamps, pipeline status, or quality scores.
 - [ ] Demo/sample data is visibly labeled and isolated from API-backed data.
 - [ ] Search appears before the horizontal dropdown filter row.
+- [ ] Jobs search input and action button use a compact, consistent 40px control height.
+- [ ] Search panel uses compact padding and does not visually dominate the results.
+- [ ] Job cards use a concise desktop metadata layout with no decorative location/source icons.
 - [ ] Filters cover career level, salary, location, employment type, category, and posting date.
 - [ ] Search and filters update results predictably; clearing filters restores the default result set.
 - [ ] Filter layout wraps cleanly on tablet and mobile without forcing page-level horizontal scrolling.
