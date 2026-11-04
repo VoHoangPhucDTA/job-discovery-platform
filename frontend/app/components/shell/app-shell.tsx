@@ -18,16 +18,8 @@ function Brand() {
       className="flex shrink-0 items-center gap-2.5 rounded-md outline-offset-4"
       aria-label="Job Discovery Platform - về trang tổng quan"
     >
-      <span className="flex size-10 items-center justify-center rounded-lg bg-primary text-sm font-bold tracking-tight text-primary-foreground">
-        JD
-      </span>
-      <span className="flex flex-col leading-tight">
-        <span className="text-body-emphasis font-semibold tracking-tight text-foreground">
-          Job Discovery
-        </span>
-        <span className="mt-1 text-small font-semibold uppercase tracking-[0.12em] text-muted-foreground">
-          Data Platform
-        </span>
+      <span className="text-lg font-semibold tracking-tight text-foreground">
+        Job Discovery
       </span>
     </Link>
   );
