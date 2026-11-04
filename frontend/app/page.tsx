@@ -45,12 +45,12 @@ export default function Home() {
             <HomeHeroHeading />
           </div>
 
-          <div className="relative mx-auto mt-6 w-full max-w-3xl rounded-xl border border-white/90 bg-surface/90 p-5 text-center shadow-sm backdrop-blur-sm sm:mt-8 sm:p-7">
+          <div className="relative mx-auto mt-6 w-full max-w-4xl rounded-xl border border-white/90 bg-surface/90 p-6 text-center shadow-sm backdrop-blur-sm sm:mt-8 sm:p-8">
             <span aria-hidden="true" className="absolute right-0 top-0 size-8 border-b border-l border-primary/20 bg-primary-soft/90 [clip-path:polygon(0_0,100%_100%,100%_0)]" />
-            <p className="text-body-emphasis font-semibold text-foreground">
+            <p className="text-lg font-semibold leading-snug text-foreground sm:text-xl">
               Hiểu được những khó khăn đó.
             </p>
-            <p className="mt-2 text-body leading-relaxed text-muted-foreground">
+            <p className="mt-3 text-base leading-relaxed text-muted-foreground sm:text-lg">
               GomViệc tổng hợp việc làm từ nhiều nền tảng, giúp bạn tìm kiếm và lọc
               công việc nhanh hơn mà không cần lướt từng website.
             </p>
