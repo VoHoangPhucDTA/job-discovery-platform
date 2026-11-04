@@ -43,6 +43,22 @@ Run this checklist before marking any Job Discovery Platform page or component c
 - [ ] No fabricated KPIs, job counts, salary averages, match percentages, testimonials, or AI claims are shown.
 - [ ] Latest jobs are omitted until backed by a real API; demo fixtures are not presented as live jobs.
 
+## Market Insights
+- [ ] The page is organized around job-seeker decisions, not decorative KPI cards or chart count.
+- [ ] Filters distinguish category, career level, location, work mode (On-site / Hybrid / Remote), and employment type (Full-time / Part-time / Internship).
+- [ ] Remote is classified as a work mode, never as a location.
+- [ ] Opportunity counts are grouped by category and career level, with unclassified levels shown separately.
+- [ ] The opportunity matrix is readable on desktop and becomes category cards on mobile without page-level horizontal overflow.
+- [ ] Skill frequencies show the eligible-description denominator and do not imply a skill is mandatory unless the source data explicitly says so.
+- [ ] Location, work mode, and employment type are distinct dimensions.
+- [ ] Salary metrics only use comparable normalized values; P25–P75, median, salary-disclosing record count, and calculation scope are explained.
+- [ ] Negotiated or non-comparable salary records are not converted to zero or silently included.
+- [ ] Each unavailable section has a clear state; missing data is never presented as zero.
+- [ ] Jobs demo fixtures are not reused as market analytics data.
+- [ ] The current scope names TopCV and VietnamWorks and does not claim to represent the entire Vietnamese IT labor market.
+- [ ] Historical trend charts and market predictions remain omitted until historical coverage and data quality are validated.
+- [ ] Filters are visibly unavailable until a verified analysis dataset/API is connected.
+
 ## Responsive
 - [ ] Checked at 360px and 390px mobile widths.
 - [ ] Checked at 768px tablet width.
