@@ -16,10 +16,10 @@ const categories = [
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative isolate mx-auto w-full max-w-5xl overflow-hidden rounded-2xl border border-primary/15 bg-gradient-to-br from-primary-soft via-white to-primary/10 px-5 pb-6 pt-8 shadow-sm sm:px-9 sm:pb-8 sm:pt-10 lg:px-12 lg:pb-10 lg:pt-12">
+      <section className="relative isolate left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen overflow-hidden border-y border-primary/15 bg-gradient-to-br from-primary-soft via-white to-primary/10 py-12 shadow-sm sm:py-16 lg:py-20">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute -right-24 -top-44 size-[28rem] rounded-full bg-primary/20 blur-3xl sm:-right-12 sm:-top-56 sm:size-[38rem]" />
-          <div className="absolute -left-32 top-8 size-[25rem] rounded-full bg-primary-soft/40 blur-3xl" />
+          <div className="absolute -left-32 top-8 size-[25rem] rounded-full bg-primary-soft/50 blur-3xl" />
           <svg viewBox="0 0 1200 560" preserveAspectRatio="none" className="absolute inset-0 size-full opacity-70">
             <defs>
               <linearGradient id="hero-wave-a" x1="0" y1="0" x2="1" y2="1">
@@ -40,23 +40,12 @@ export default function Home() {
           </svg>
         </div>
 
-        <div className="relative z-10">
-          <div className="mb-7 flex flex-wrap items-center justify-between gap-3 sm:mb-10">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-surface/80 px-3 py-1.5 text-small font-medium text-slate-600 shadow-sm backdrop-blur-sm">
-              <span className="size-2 rounded-full bg-primary" />
-              GomViệc · Khám phá việc làm IT
-            </span>
-            <div className="hidden items-center gap-2 sm:flex">
-              <span className="rounded-full border border-white/80 bg-surface/70 px-3 py-1.5 text-xs font-semibold text-slate-600 shadow-sm backdrop-blur-sm">TopCV</span>
-              <span className="rounded-full border border-white/80 bg-white/60 px-3 py-1.5 text-xs font-semibold text-slate-600 shadow-sm backdrop-blur-sm">VietnamWorks</span>
-            </div>
-          </div>
-
-          <div className="max-w-3xl text-left">
+        <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-4 text-center sm:px-6 lg:px-8">
+          <div className="w-full max-w-4xl">
             <HomeHeroHeading />
           </div>
 
-          <div className="relative mt-5 max-w-2xl rounded-xl border border-white/90 bg-surface/90 p-5 shadow-sm backdrop-blur-sm sm:mt-6 sm:p-6">
+          <div className="relative mx-auto mt-6 w-full max-w-3xl rounded-xl border border-white/90 bg-surface/90 p-5 text-center shadow-sm backdrop-blur-sm sm:mt-8 sm:p-7">
             <span aria-hidden="true" className="absolute right-0 top-0 size-8 border-b border-l border-primary/20 bg-primary-soft/90 [clip-path:polygon(0_0,100%_100%,100%_0)]" />
             <p className="text-body-emphasis font-semibold text-foreground">
               Hiểu được những khó khăn đó.
@@ -65,7 +54,7 @@ export default function Home() {
               GomViệc tổng hợp việc làm từ nhiều nền tảng, giúp bạn tìm kiếm và lọc
               công việc nhanh hơn mà không cần lướt từng website.
             </p>
-            <div aria-hidden="true" className="mt-4 h-px w-16 bg-primary/30" />
+            <div aria-hidden="true" className="mx-auto mt-4 h-px w-16 bg-primary/30" />
           </div>
         </div>
       </section>
