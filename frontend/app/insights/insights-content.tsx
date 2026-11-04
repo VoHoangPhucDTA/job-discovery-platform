@@ -96,7 +96,7 @@ function FilterPanel() {
 
       <p className="text-small text-muted-foreground">
         Bộ lọc sẽ được kích hoạt khi dữ liệu phân tích được kết nối. Hiện tại
-        các tin minh họa trên trang Việc làm không được dùng để tính insight.
+        các tin minh họa trên trang Việc làm không được dùng để tính toán phân tích.
       </p>
     </Card>
   );
@@ -117,7 +117,7 @@ function OpportunitySection() {
           <p className="text-small text-muted-foreground">
             Ma trận dự kiến gồm 5 cấp bậc và nhóm tin chưa phân loại được.
           </p>
-          <Badge variant="warning">Chưa có dữ liệu cơ hội</Badge>
+          <Badge variant="neutral">Chưa có dữ liệu cơ hội</Badge>
         </div>
 
         <div className="hidden overflow-x-auto sm:block">
@@ -217,7 +217,7 @@ function SkillsSection() {
               Chỉ phân tích các tin có mô tả tuyển dụng đủ điều kiện.
             </p>
           </div>
-          <Badge variant="warning">Chưa có dữ liệu kỹ năng</Badge>
+          <Badge variant="neutral">Chưa có dữ liệu kỹ năng</Badge>
         </div>
 
         <EmptyState
@@ -247,7 +247,7 @@ function WorkLocationSection() {
       title: "Loại hình công việc",
       description:
         "Cho biết cơ hội là toàn thời gian, bán thời gian hay thực tập.",
-      values: ["Full-time", "Part-time", "Internship"],
+      values: ["Toàn thời gian", "Bán thời gian", "Thực tập"],
     },
   ];
 
@@ -317,7 +317,7 @@ function SalarySection() {
               ngoại lệ.
             </p>
           </div>
-          <Badge variant="warning">Chưa có dữ liệu lương chuẩn hóa</Badge>
+          <Badge variant="neutral">Chưa có dữ liệu lương chuẩn hóa</Badge>
         </div>
 
         <EmptyState
