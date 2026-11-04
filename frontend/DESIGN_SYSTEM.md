@@ -1,6 +1,6 @@
 # Job Discovery Platform — Frontend Design System
 
-> **Status:** v1.9 · **Scope:** all frontend routes and shared components  
+> **Status:** v2.0 · **Scope:** all frontend routes and shared components  
 > **Product direction:** Modern Data Product — clear, trustworthy, data-focused, Vietnamese-first.
 
 This document is the single source of truth for visual and interaction decisions. Home, Jobs, Market Insights, and Data Pipeline must feel like one product. Page-specific variation is allowed only where it improves the task; it must not create a separate visual language.
@@ -201,9 +201,9 @@ Keep this single-column, vertically stacked content order:
 2. One full-width keyword search for role, skill, or company.
 3. A compact, responsive horizontal filter row: career level, salary, location, employment type, category, and posting date. The default visible labels are “Cấp bậc”, “Mức lương”, “Địa điểm”, “Hình thức”, “Lĩnh vực”, and “Thời gian đăng” (do not prefix them with “Tất cả”); the underlying unfiltered value remains unchanged. Submit the selected criteria to the Jobs route.
 4. Clickable, text-only category shortcuts (Data, Backend, Frontend, DevOps, QA) that open Jobs with the matching category preselected. Do not add explanatory copy beneath the section title or trailing arrow glyphs to the shortcuts.
-5. A restrained source strip that names only the currently supported sources: TopCV and VietnamWorks.
+5. Do not render a recruitment-source strip on Home; source scope is documented in project materials, not in the visitor-facing landing page.
 
-On Home, keep the gap between the search/filter card and the category section at 36px on mobile and 40px from the desktop breakpoint upward. Keep the other section gaps visually consistent with the existing page rhythm.
+On Home, keep the gap between the hero and search/filter card at 24px. Keep the gap between the search/filter card and category section at 24px. The Home page does not render a recruitment-source strip or shared footer; use modest bottom padding after the category shortcuts. The shared shell has no footer in v2.0.
 
 Do not split the Home hero into columns. Do not show a left sidebar, architecture diagram, ETL explanation, pipeline status, data-engineering journey cards, market KPIs, fabricated job counts, salary averages, match percentages, testimonials, or unsupported AI features on Home. Data Pipeline remains a separate navigation route for technical reviewers. Do not add a latest-jobs section until a real jobs API is available; never populate it with demo fixtures without an explicit sample-data label.
 
