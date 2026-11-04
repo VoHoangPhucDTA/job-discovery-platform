@@ -1,6 +1,6 @@
 # Job Discovery Platform — Frontend Design System
 
-> **Status:** v1.4 · **Scope:** all frontend routes and shared components  
+> **Status:** v1.5 · **Scope:** all frontend routes and shared components  
 > **Product direction:** Modern Data Product — clear, trustworthy, data-focused, Vietnamese-first.
 
 This document is the single source of truth for visual and interaction decisions. Home, Jobs, Market Insights, and Data Pipeline must feel like one product. Page-specific variation is allowed only where it improves the task; it must not create a separate visual language.
@@ -195,11 +195,13 @@ The Home route is a job-discovery entry point for people who want to search IT v
 
 Keep this single-column, vertically stacked content order:
 
-1. A concise hero that explains the core value: IT job opportunities from multiple platforms, searchable in one place.
+1. A single-level, large H1 hero with no eyebrow label or secondary description. Rotate these three Vietnamese messages in sequence: “Loay hoay tìm kiếm các công việc từ nhiều nền tảng”, “Không biết nên ứng tuyển công việc ở đâu”, and “Ở đây tập hợp các công việc từ nhiều nền tảng giúp bạn nhanh chóng tìm được công việc thích hợp.” Use a typewriter sequence (type the full message, pause, delete it, then move to the next message and loop). Reserve enough heading height for the longest message so the search section does not jump while the text changes. Respect `prefers-reduced-motion` by showing a complete static message instead of animating.
 2. One full-width keyword search for role, skill, or company.
-3. A compact, responsive horizontal filter row: career level, salary, location, employment type, category, and posting date. Submit the selected criteria to the Jobs route.
-4. Clickable category shortcuts (Data, Backend, Frontend, DevOps, QA) that open Jobs with the matching category preselected.
+3. A compact, responsive horizontal filter row: career level, salary, location, employment type, category, and posting date. The default visible labels are “Cấp bậc”, “Mức lương”, “Địa điểm”, “Hình thức”, “Lĩnh vực”, and “Thời gian đăng” (do not prefix them with “Tất cả”); the underlying unfiltered value remains unchanged. Submit the selected criteria to the Jobs route.
+4. Clickable, text-only category shortcuts (Data, Backend, Frontend, DevOps, QA) that open Jobs with the matching category preselected. Do not add explanatory copy beneath the section title or trailing arrow glyphs to the shortcuts.
 5. A restrained source strip that names only the currently supported sources: TopCV and VietnamWorks.
+
+On Home, keep the gap between the search/filter card and the category section at 36px on mobile and 40px from the desktop breakpoint upward. Keep the other section gaps visually consistent with the existing page rhythm.
 
 Do not split the Home hero into columns. Do not show a left sidebar, architecture diagram, ETL explanation, pipeline status, data-engineering journey cards, market KPIs, fabricated job counts, salary averages, match percentages, testimonials, or unsupported AI features on Home. Data Pipeline remains a separate navigation route for technical reviewers. Do not add a latest-jobs section until a real jobs API is available; never populate it with demo fixtures without an explicit sample-data label.
 
@@ -255,7 +257,7 @@ Do not split the Home hero into columns. Do not show a left sidebar, architectur
 - Respect `prefers-reduced-motion`.
 - All interactive controls must have hover, focus-visible, disabled, and (where relevant) loading states.
 - Provide clear feedback for filter application, pagination, refresh, and errors.
-- Avoid auto-rotating carousels and distracting entrance animations.
+- Avoid auto-rotating carousels and distracting entrance animations. The Home hero's approved three-message typewriter cycle is a purposeful copy treatment, not a carousel; it must reserve its layout height and respect `prefers-reduced-motion`.
 
 ## 10. Responsive behavior
 
