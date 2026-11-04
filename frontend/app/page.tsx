@@ -18,8 +18,8 @@ export default function Home() {
     <div className="flex flex-col">
       <section className="relative isolate mx-auto w-full max-w-5xl overflow-hidden rounded-2xl border border-primary/15 bg-gradient-to-br from-primary-soft via-white to-primary/10 px-5 pb-6 pt-8 shadow-sm sm:px-9 sm:pb-8 sm:pt-10 lg:px-12 lg:pb-10 lg:pt-12">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute -right-24 -top-44 size-[28rem] rounded-full bg-blue-300/25 blur-3xl sm:-right-12 sm:-top-56 sm:size-[38rem]" />
-          <div className="absolute -left-32 top-8 size-[25rem] rounded-full bg-indigo-200/30 blur-3xl" />
+          <div className="absolute -right-24 -top-44 size-[28rem] rounded-full bg-primary/20 blur-3xl sm:-right-12 sm:-top-56 sm:size-[38rem]" />
+          <div className="absolute -left-32 top-8 size-[25rem] rounded-full bg-primary-soft/40 blur-3xl" />
           <svg viewBox="0 0 1200 560" preserveAspectRatio="none" className="absolute inset-0 size-full opacity-70">
             <defs>
               <linearGradient id="hero-wave-a" x1="0" y1="0" x2="1" y2="1">
@@ -30,7 +30,7 @@ export default function Home() {
               <linearGradient id="hero-wave-b" x1="0" y1="0" x2="1" y2="0">
                 <stop offset="0%" stopColor="var(--primary-soft)" stopOpacity=".15" />
                 <stop offset="55%" stopColor="var(--primary)" stopOpacity=".28" />
-                <stop offset="100%" stopColor="#ffffff" stopOpacity=".65" />
+                <stop offset="100%" stopColor="var(--surface)" stopOpacity=".65" />
               </linearGradient>
             </defs>
             <path d="M0 0H1200V175C1050 245 930 265 790 220C635 170 590 42 420 36C245 30 190 160 0 92Z" fill="url(#hero-wave-a)" />
@@ -42,12 +42,12 @@ export default function Home() {
 
         <div className="relative z-10">
           <div className="mb-7 flex flex-wrap items-center justify-between gap-3 sm:mb-10">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/65 px-3 py-1.5 text-small font-medium text-slate-600 shadow-sm backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-surface/80 px-3 py-1.5 text-small font-medium text-slate-600 shadow-sm backdrop-blur-sm">
               <span className="size-2 rounded-full bg-primary" />
               GomViệc · Khám phá việc làm IT
             </span>
             <div className="hidden items-center gap-2 sm:flex">
-              <span className="rounded-full border border-white/80 bg-white/60 px-3 py-1.5 text-xs font-semibold text-slate-600 shadow-sm backdrop-blur-sm">TopCV</span>
+              <span className="rounded-full border border-white/80 bg-surface/70 px-3 py-1.5 text-xs font-semibold text-slate-600 shadow-sm backdrop-blur-sm">TopCV</span>
               <span className="rounded-full border border-white/80 bg-white/60 px-3 py-1.5 text-xs font-semibold text-slate-600 shadow-sm backdrop-blur-sm">VietnamWorks</span>
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function Home() {
             <HomeHeroHeading />
           </div>
 
-          <div className="relative mt-5 max-w-2xl rounded-xl border border-white/90 bg-white/90 p-5 shadow-sm backdrop-blur-sm sm:mt-6 sm:p-6">
+          <div className="relative mt-5 max-w-2xl rounded-xl border border-white/90 bg-surface/90 p-5 shadow-sm backdrop-blur-sm sm:mt-6 sm:p-6">
             <span aria-hidden="true" className="absolute right-0 top-0 size-8 border-b border-l border-primary/20 bg-primary-soft/90 [clip-path:polygon(0_0,100%_100%,100%_0)]" />
             <p className="text-body-emphasis font-semibold text-foreground">
               Hiểu được những khó khăn đó.
