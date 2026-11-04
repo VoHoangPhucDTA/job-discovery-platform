@@ -18,9 +18,19 @@ export default function Home() {
     <div className="flex flex-col">
       <section className="mx-auto w-full max-w-4xl pt-2 text-center sm:pt-6">
         <HomeHeroHeading />
+
+        <Card className="mx-auto mt-5 max-w-3xl p-5 text-left sm:p-6">
+          <p className="text-body-emphasis font-semibold text-foreground">
+            Hiểu được những khó khăn đó.
+          </p>
+          <p className="mt-2 text-body leading-relaxed text-muted-foreground">
+            GomViệc tổng hợp việc làm từ nhiều nền tảng, giúp bạn tìm kiếm và lọc
+            công việc nhanh hơn mà không cần lướt từng website.
+          </p>
+        </Card>
       </section>
 
-      <section aria-labelledby="job-search-title" className="mx-auto mt-10 w-full max-w-5xl sm:mt-12">
+      <section aria-labelledby="job-search-title" className="mx-auto mt-8 w-full max-w-5xl">
         <Card className="space-y-4 p-4 sm:p-5">
           <h2 id="job-search-title" className="text-card-title font-semibold text-foreground">
             Tìm kiếm việc làm
