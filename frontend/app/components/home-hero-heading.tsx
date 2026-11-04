@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const messages = [
   "Loay hoay tìm kiếm các công việc từ nhiều nền tảng",
   "Không biết nên ứng tuyển công việc ở đâu",
-  "Ở đây tập hợp các công việc từ nhiều nền tảng giúp bạn nhanh chóng tìm được công việc thích hợp.",
+  "Tốn thời gian tìm kiếm công việc từ nhiều nền tảng?",
 ] as const;
 
 export function HomeHeroHeading() {
