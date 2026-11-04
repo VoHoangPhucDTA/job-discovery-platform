@@ -16,18 +16,58 @@ const categories = [
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="mx-auto w-full max-w-4xl pt-2 text-center sm:pt-6">
-        <HomeHeroHeading />
+      <section className="relative isolate mx-auto w-full max-w-5xl overflow-hidden rounded-2xl border border-primary/15 bg-gradient-to-br from-primary-soft via-white to-[#e5efff] px-5 pb-6 pt-8 shadow-sm sm:px-9 sm:pb-8 sm:pt-10 lg:px-12 lg:pb-10 lg:pt-12">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute -right-24 -top-44 size-[28rem] rounded-full bg-blue-300/25 blur-3xl sm:-right-12 sm:-top-56 sm:size-[38rem]" />
+          <div className="absolute -left-32 top-8 size-[25rem] rounded-full bg-indigo-200/30 blur-3xl" />
+          <svg viewBox="0 0 1200 560" preserveAspectRatio="none" className="absolute inset-0 size-full opacity-70">
+            <defs>
+              <linearGradient id="hero-wave-a" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#ffffff" stopOpacity=".9" />
+                <stop offset="55%" stopColor="#bfdbfe" stopOpacity=".55" />
+                <stop offset="100%" stopColor="#93c5fd" stopOpacity=".18" />
+              </linearGradient>
+              <linearGradient id="hero-wave-b" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="#dbeafe" stopOpacity=".15" />
+                <stop offset="55%" stopColor="#60a5fa" stopOpacity=".28" />
+                <stop offset="100%" stopColor="#ffffff" stopOpacity=".65" />
+              </linearGradient>
+            </defs>
+            <path d="M0 0H1200V175C1050 245 930 265 790 220C635 170 590 42 420 36C245 30 190 160 0 92Z" fill="url(#hero-wave-a)" />
+            <path d="M0 0H850C1005 55 1010 190 900 250C790 310 670 250 585 180C485 98 365 85 245 145C145 195 65 170 0 135Z" fill="url(#hero-wave-b)" />
+            <path d="M0 230C170 160 250 250 390 310C545 375 700 300 850 345C1000 390 1095 360 1200 300" fill="none" stroke="#ffffff" strokeOpacity=".75" strokeWidth="2" />
+            <path d="M0 285C165 215 255 300 400 360C570 430 730 350 885 390C1035 430 1120 405 1200 365" fill="none" stroke="#bfdbfe" strokeOpacity=".7" strokeWidth="2" />
+          </svg>
+        </div>
 
-        <Card className="mx-auto mt-5 max-w-3xl p-5 text-left sm:p-6">
-          <p className="text-body-emphasis font-semibold text-foreground">
-            Hiểu được những khó khăn đó.
-          </p>
-          <p className="mt-2 text-body leading-relaxed text-muted-foreground">
-            GomViệc tổng hợp việc làm từ nhiều nền tảng, giúp bạn tìm kiếm và lọc
-            công việc nhanh hơn mà không cần lướt từng website.
-          </p>
-        </Card>
+        <div className="relative z-10">
+          <div className="mb-7 flex flex-wrap items-center justify-between gap-3 sm:mb-10">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/65 px-3 py-1.5 text-small font-medium text-slate-600 shadow-sm backdrop-blur-sm">
+              <span className="size-2 rounded-full bg-primary" />
+              GomViệc · Khám phá việc làm IT
+            </span>
+            <div className="hidden items-center gap-2 sm:flex">
+              <span className="rounded-full border border-white/80 bg-white/60 px-3 py-1.5 text-xs font-semibold text-slate-600 shadow-sm backdrop-blur-sm">TopCV</span>
+              <span className="rounded-full border border-white/80 bg-white/60 px-3 py-1.5 text-xs font-semibold text-slate-600 shadow-sm backdrop-blur-sm">VietnamWorks</span>
+            </div>
+          </div>
+
+          <div className="max-w-3xl text-left">
+            <HomeHeroHeading />
+          </div>
+
+          <div className="relative mt-5 max-w-2xl rounded-xl border border-white/90 bg-white/90 p-5 shadow-[0_12px_32px_-22px_rgba(37,99,235,0.45)] backdrop-blur-sm sm:mt-6 sm:p-6">
+            <span aria-hidden="true" className="absolute right-0 top-0 size-8 border-b border-l border-blue-100 bg-blue-50/90 [clip-path:polygon(0_0,100%_100%,100%_0)]" />
+            <p className="text-body-emphasis font-semibold text-foreground">
+              Hiểu được những khó khăn đó.
+            </p>
+            <p className="mt-2 text-body leading-relaxed text-muted-foreground">
+              GomViệc tổng hợp việc làm từ nhiều nền tảng, giúp bạn tìm kiếm và lọc
+              công việc nhanh hơn mà không cần lướt từng website.
+            </p>
+            <div aria-hidden="true" className="mt-4 h-px w-16 bg-primary/30" />
+          </div>
+        </div>
       </section>
 
       <section aria-labelledby="job-search-title" className="mx-auto mt-8 w-full max-w-5xl">
